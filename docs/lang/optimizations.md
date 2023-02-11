@@ -512,12 +512,12 @@ void test(int* __restrict a, int* __restrict b, int n) {
 
 GCC 和 Clang 都支持这个 Sanitizer。包括如下检查项：
 
-- 越界
-- 释放后使用 (use-after-free)
-- 返回后使用 (use-after-return)
-- 重复释放 (double-free)
-- 内存泄漏 (memory-leaks)
-- 离开作用域后使用  (use-after-scope)
+-   越界
+-   释放后使用 (use-after-free)
+-   返回后使用 (use-after-return)
+-   重复释放 (double-free)
+-   内存泄漏 (memory-leaks)
+-   离开作用域后使用  (use-after-scope)
 
 应用这项检查会让你的程序慢 2x 左右。
 
@@ -527,9 +527,9 @@ GCC 和 Clang 都支持这个 Sanitizer。包括如下检查项：
 
 Undefined Behavior Sanitizer (a.k.a UBSan) 用于检查代码中的未定义行为。GCC 和 Clang 都支持这个 Sanitizer。自动检查你的程序有无未定义行为。UBSan 的检查项目包括：
 
-- 位运算溢出，例如 32 位整数左移 72 位
-- 有符号整数溢出
-- 浮点数转换到整数数据溢出
+-   位运算溢出，例如 32 位整数左移 72 位
+-   有符号整数溢出
+-   浮点数转换到整数数据溢出
 
 UBSan 的检查项可选，对程序的影响参考提供的网页地址。
 

@@ -11,8 +11,8 @@
 
 对于每个状态，都存在两种决策（其中下面的 $x$ 都是 $i$ 的儿子）：
 
-- 上司不参加舞会时，下属可以参加，也可以不参加，此时有 $f(i,0) = \sum\max \{f(x,1),f(x,0)\}$；
-- 上司参加舞会时，下属都不会参加，此时有 $f(i,1) = \sum{f(x,0)} + a_i$。
+-   上司不参加舞会时，下属可以参加，也可以不参加，此时有 $f(i,0) = \sum\max \{f(x,1),f(x,0)\}$；
+-   上司参加舞会时，下属都不会参加，此时有 $f(i,1) = \sum{f(x,0)} + a_i$。
 
 我们可以通过 DFS，在返回上一层时更新当前结点的最优解。
 
@@ -22,11 +22,11 @@
 
 ### 习题
 
-- [HDU 2196 Computer](https://vjudge.net/problem/HDU-2196)
+-   [HDU 2196 Computer](https://vjudge.net/problem/HDU-2196)
 
-- [POJ 1463 Strategic game](http://poj.org/problem?id=1463)
+-   [POJ 1463 Strategic game](http://poj.org/problem?id=1463)
 
-- [\[POI2014\]FAR-FarmCraft](https://www.luogu.com.cn/problem/P3574)
+-   [\[POI2014\]FAR-FarmCraft](https://www.luogu.com.cn/problem/P3574)
 
 ## 树上背包
 
@@ -66,11 +66,11 @@ $f$ 的第二维可以很轻松地用滚动数组的方式省略掉，注意这�
 
 ### 习题
 
-- [「CTSC1997」选课](https://www.luogu.com.cn/problem/P2014)
+-   [「CTSC1997」选课](https://www.luogu.com.cn/problem/P2014)
 
-- [「JSOI2018」潜入行动](https://loj.ac/problem/2546)
+-   [「JSOI2018」潜入行动](https://loj.ac/problem/2546)
 
-- [「SDOI2017」苹果树](https://loj.ac/problem/2268)
+-   [「SDOI2017」苹果树](https://loj.ac/problem/2268)
 
 ## 换根 DP
 
@@ -89,9 +89,9 @@ $f$ 的第二维可以很轻松地用滚动数组的方式省略掉，注意这�
 
 $f_v\leftarrow f_u$ 可以体现换根，即以 $u$ 为根转移到以 $v$ 为根。显然在换根的转移过程中，以 $v$ 为根或以 $u$ 为根会导致其子树中的结点的深度产生改变。具体表现为：
 
-- 所有在 $v$ 的子树上的结点深度都减少了一，那么总深度和就减少了 $s_v$；
+-   所有在 $v$ 的子树上的结点深度都减少了一，那么总深度和就减少了 $s_v$；
 
-- 所有不在 $v$ 的子树上的结点深度都增加了一，那么总深度和就增加了 $n-s_v$；
+-   所有不在 $v$ 的子树上的结点深度都增加了一，那么总深度和就增加了 $n-s_v$；
 
 根据这两个条件就可以推出状态转移方程 $f_v = f_u - s_v + n - s_v=f_u + n - 2 \times s_v$。
 
@@ -104,13 +104,13 @@ $f_v\leftarrow f_u$ 可以体现换根，即以 $u$ 为根转移到以 $v$ 为�
 
 ### 习题
 
-- [POJ 3585 Accumulation Degree](http://poj.org/problem?id=3585)
+-   [POJ 3585 Accumulation Degree](http://poj.org/problem?id=3585)
 
-- [\[POI2008\]STA-Station](https://www.luogu.com.cn/problem/P3478)
+-   [\[POI2008\]STA-Station](https://www.luogu.com.cn/problem/P3478)
 
-- [\[USACO10MAR\]Great Cow Gathering G](https://www.luogu.com.cn/problem/P2986)
+-   [\[USACO10MAR\]Great Cow Gathering G](https://www.luogu.com.cn/problem/P2986)
 
-- [CodeForce 708C Centroids](http://codeforces.com/problemset/problem/708/C)
+-   [CodeForce 708C Centroids](http://codeforces.com/problemset/problem/708/C)
 
 ## 参考资料与注释
 

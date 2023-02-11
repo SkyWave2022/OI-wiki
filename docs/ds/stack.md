@@ -84,22 +84,22 @@ C++ 中的 STL 也提供了一个容器 `std::stack`，使用前需要引入 `st
     
     `Container` 为用于存储元素的底层容器类型。这个容器必须提供通常语义的下列函数：
     
-    - `back()`
-    - `push_back()`
-    - `pop_back()`
+    -   `back()`
+    -   `push_back()`
+    -   `pop_back()`
     
     STL 容器 `std::vector`、`std::deque` 和 `std::list` 满足这些要求。如果不指定，则默认使用 `std::deque` 作为底层容器。
 
 STL 中的 `stack` 容器提供了一众成员函数以供调用，其中较为常用的有：
 
 -   元素访问
-    - `st.top()` 返回栈顶
+    -   `st.top()` 返回栈顶
 -   修改
-    - `st.push()` 插入传入的参数到栈顶
-    - `st.pop()` 弹出栈顶
+    -   `st.push()` 插入传入的参数到栈顶
+    -   `st.pop()` 弹出栈顶
 -   容量
-    - `st.empty()` 返回是否为空
-    - `st.size()` 返回元素数量
+    -   `st.empty()` 返回是否为空
+    -   `st.size()` 返回元素数量
 
 此外，`std::stack` 还提供了一些运算符。较为常用的是使用赋值运算符 `=` 为 `stack` 赋值，示例：
 
@@ -143,4 +143,4 @@ cout << st2.top() << endl;
 
 ## 参考资料
 
-1. [std::stack - zh.cppreference.com](https://zh.cppreference.com/w/cpp/container/stack)
+1.  [std::stack - zh.cppreference.com](https://zh.cppreference.com/w/cpp/container/stack)

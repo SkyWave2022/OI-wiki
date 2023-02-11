@@ -18,8 +18,8 @@ $$
 
 下面将引入两种特殊的组合类和组合对象：
 
-- 记 $\epsilon$ 为中性对象（neutral object）和 $\mathcal{E}=\lbrace \epsilon \rbrace$ 为中性类（neutral class），中性对象的大小为 $0$，中性类的 OGF 为 $E(z)=1$。
-- 记 $\circ$ 或 $\bullet$ 为原子对象（atom object）和 $\mathcal{Z}_{\circ}=\lbrace \circ\rbrace$ 或 $\mathcal{Z}_{\bullet}=\lbrace \bullet\rbrace$ 或简写为 $\mathcal{Z}$ 为原子类（atom class），原子对象的大小为 $1$，原子类的 OGF 为 $Z(z)=z$。
+-   记 $\epsilon$ 为中性对象（neutral object）和 $\mathcal{E}=\lbrace \epsilon \rbrace$ 为中性类（neutral class），中性对象的大小为 $0$，中性类的 OGF 为 $E(z)=1$。
+-   记 $\circ$ 或 $\bullet$ 为原子对象（atom object）和 $\mathcal{Z}_{\circ}=\lbrace \circ\rbrace$ 或 $\mathcal{Z}_{\bullet}=\lbrace \bullet\rbrace$ 或简写为 $\mathcal{Z}$ 为原子类（atom class），原子对象的大小为 $1$，原子类的 OGF 为 $Z(z)=z$。
 
 对于两个组合类 $\mathcal{A}$ 和 $\mathcal{B}$ 在组合意义上同构记为 $\mathcal{A}=\mathcal{B}$ 或 $\mathcal{A}\cong\mathcal{B}$，但仅当该同构不平凡时才使用后者的记号。
 
@@ -450,4 +450,4 @@ $$
 
 ## 参考文献
 
-- Philippe Flajolet and Robert Sedgewick.[Analytic Combinatorics](http://algo.inria.fr/flajolet/Publications/books.html).
+-   Philippe Flajolet and Robert Sedgewick.[Analytic Combinatorics](http://algo.inria.fr/flajolet/Publications/books.html).

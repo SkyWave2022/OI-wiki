@@ -10,8 +10,8 @@ $$
 
 直接简单实现状态转移，总时间复杂度将会达到 $O(n^3)$，但当函数 $w(l,r)$ 满足一些特殊的性质时，我们可以利用决策的单调性进行优化。
 
-- **区间包含单调性**：如果对于任意 $l \leq l' \leq r' \leq r$，均有 $w(l',r') \leq w(l,r)$ 成立，则称函数 $w$ 对于区间包含关系具有单调性。
-- **四边形不等式**：如果对于任意 $l_1\leq l_2 \leq r_1 \leq r_2$，均有 $w(l_1,r_1)+w(l_2,r_2) \leq w(l_1,r_2) + w(l_2,r_1)$ 成立，则称函数 $w$ 满足四边形不等式（简记为“交叉小于包含”）。若等号永远成立，则称函数 $w$ 满足 **四边形恒等式**。
+-   **区间包含单调性**：如果对于任意 $l \leq l' \leq r' \leq r$，均有 $w(l',r') \leq w(l,r)$ 成立，则称函数 $w$ 对于区间包含关系具有单调性。
+-   **四边形不等式**：如果对于任意 $l_1\leq l_2 \leq r_1 \leq r_2$，均有 $w(l_1,r_1)+w(l_2,r_2) \leq w(l_1,r_2) + w(l_2,r_1)$ 成立，则称函数 $w$ 满足四边形不等式（简记为“交叉小于包含”）。若等号永远成立，则称函数 $w$ 满足 **四边形恒等式**。
 
 **引理 1**：若 $w(l, r)$ 满足区间包含单调性和四边形不等式，则状态 $f_{l,r}$ 满足四边形不等式。
 
@@ -383,18 +383,18 @@ $$
 
 ## 习题
 
-- [「IOI2000」邮局](https://www.luogu.com.cn/problem/P4767)
-- [Codeforces - Ciel and Gondolas](https://codeforces.com/contest/321/problem/E)(Be careful with I/O!)
-- [SPOJ - LARMY](https://www.spoj.com/problems/LARMY/)
-- [Codechef - CHEFAOR](https://www.codechef.com/problems/CHEFAOR)
-- [Hackerrank - Guardians of the Lunatics](https://www.hackerrank.com/contests/ioi-2014-practice-contest-2/challenges/guardians-lunatics-ioi14)
-- [ACM ICPC World Finals 2017 - Money](https://open.kattis.com/problems/money)
+-   [「IOI2000」邮局](https://www.luogu.com.cn/problem/P4767)
+-   [Codeforces - Ciel and Gondolas](https://codeforces.com/contest/321/problem/E)(Be careful with I/O!)
+-   [SPOJ - LARMY](https://www.spoj.com/problems/LARMY/)
+-   [Codechef - CHEFAOR](https://www.codechef.com/problems/CHEFAOR)
+-   [Hackerrank - Guardians of the Lunatics](https://www.hackerrank.com/contests/ioi-2014-practice-contest-2/challenges/guardians-lunatics-ioi14)
+-   [ACM ICPC World Finals 2017 - Money](https://open.kattis.com/problems/money)
 
 ## 参考资料
 
-- [noiau 的 CSDN 博客](https://blog.csdn.net/noiau/article/details/72514812)
-- [Quora Answer by Michael Levin](https://www.quora.com/What-is-divide-and-conquer-optimization-in-dynamic-programming)
-- [Video Tutorial by "Sothe" the Algorithm Wolf](https://www.youtube.com/watch?v=wLXEWuDWnzI)
+-   [noiau 的 CSDN 博客](https://blog.csdn.net/noiau/article/details/72514812)
+-   [Quora Answer by Michael Levin](https://www.quora.com/What-is-divide-and-conquer-optimization-in-dynamic-programming)
+-   [Video Tutorial by "Sothe" the Algorithm Wolf](https://www.youtube.com/watch?v=wLXEWuDWnzI)
 
 * * *
 

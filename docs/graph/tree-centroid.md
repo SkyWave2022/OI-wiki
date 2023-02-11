@@ -54,6 +54,6 @@ author: Ir1d, Marcythm, LucienShui, Anguei, H-J-Granger, CornWorld
 
 ## 习题
 
-- [POJ 1655 Balancing Art](http://poj.org/problem?id=1655)（模板题）
-- [洛谷 P1364 医院设置](https://www.luogu.com.cn/problem/P1364)
-- [CodeForces 1406C Link Cut Centroids](https://codeforces.com/contest/1406/problem/C)
+-   [POJ 1655 Balancing Art](http://poj.org/problem?id=1655)（模板题）
+-   [洛谷 P1364 医院设置](https://www.luogu.com.cn/problem/P1364)
+-   [CodeForces 1406C Link Cut Centroids](https://codeforces.com/contest/1406/problem/C)

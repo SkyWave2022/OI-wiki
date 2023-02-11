@@ -14,10 +14,10 @@
 设 $f_{i,j}$ 为轮到公主时袋子里有 $i$ 只白鼠，$j$ 只黑鼠，公主赢的概率。初始化边界，$f_{0,j}=0$ 因为没有白鼠了算龙赢，$f_{i,0}=1$ 因为抓一只就是白鼠，公主赢。
 考虑 $f_{i,j}$ 的转移：
 
-- 公主抓到一只白鼠，公主赢了。概率为 $\frac{i}{i+j}$；
-- 公主抓到一只黑鼠，龙抓到一只白鼠，龙赢了。概率为 $\frac{j}{i+j}\cdot \frac{i}{i+j-1}$；
-- 公主抓到一只黑鼠，龙抓到一只黑鼠，跑出来一只黑鼠，转移到 $f_{i,j-3}$。概率为 $\frac{j}{i+j}\cdot\frac{j-1}{i+j-1}\cdot\frac{j-2}{i+j-2}$；
-- 公主抓到一只黑鼠，龙抓到一只黑鼠，跑出来一只白鼠，转移到 $f_{i-1,j-2}$。概率为 $\frac{j}{i+j}\cdot\frac{j-1}{i+j-1}\cdot\frac{i}{i+j-2}$；
+-   公主抓到一只白鼠，公主赢了。概率为 $\frac{i}{i+j}$；
+-   公主抓到一只黑鼠，龙抓到一只白鼠，龙赢了。概率为 $\frac{j}{i+j}\cdot \frac{i}{i+j-1}$；
+-   公主抓到一只黑鼠，龙抓到一只黑鼠，跑出来一只黑鼠，转移到 $f_{i,j-3}$。概率为 $\frac{j}{i+j}\cdot\frac{j-1}{i+j-1}\cdot\frac{j-2}{i+j-2}$；
+-   公主抓到一只黑鼠，龙抓到一只黑鼠，跑出来一只白鼠，转移到 $f_{i-1,j-2}$。概率为 $\frac{j}{i+j}\cdot\frac{j-1}{i+j-1}\cdot\frac{i}{i+j-2}$；
 
 考虑公主赢的概率，第二种情况不参与计算。并且要保证后两种情况合法，所以还要判断 $i,j$ 的大小，满足第三种情况至少要有 3 只黑鼠，满足第四种情况要有 1 只白鼠和 2 只黑鼠。
 
@@ -30,9 +30,9 @@
 
 ### 习题
 
-- [CodeForces 148 D Bag of mice](https://codeforces.com/problemset/problem/148/D)
-- [POJ3071 Football](http://poj.org/problem?id=3071)
-- [CodeForces 768 D Jon and Orbs](https://codeforces.com/problemset/problem/768/D)
+-   [CodeForces 148 D Bag of mice](https://codeforces.com/problemset/problem/148/D)
+-   [POJ3071 Football](http://poj.org/problem?id=3071)
+-   [CodeForces 768 D Jon and Orbs](https://codeforces.com/problemset/problem/768/D)
 
 ## DP 求期望
 
@@ -47,10 +47,10 @@
 
 考虑 $f_{i,j}$ 的状态转移：
 
-- $f_{i,j}$，发现一个 bug 属于已经发现的 $i$ 种 bug 分类，$j$ 个子系统，概率为 $p_1=\frac{i}{n}\cdot\frac{j}{s}$
-- $f_{i,j+1}$，发现一个 bug 属于已经发现的 $i$ 种 bug 分类，不属于已经发现的子系统，概率为 $p_2=\frac{i}{n}\cdot(1-\frac{j}{s})$
-- $f_{i+1,j}$，发现一个 bug 不属于已经发现 bug 分类，属于 $j$ 个子系统，概率为 $p_3=(1-\frac{i}{n})\cdot\frac{j}{s}$
-- $f_{i+1,j+1}$，发现一个 bug 不属于已经发现 bug 分类，不属于已经发现的子系统，概率为 $p_4=(1-\frac{i}{n})\cdot(1-\frac{j}{s})$
+-   $f_{i,j}$，发现一个 bug 属于已经发现的 $i$ 种 bug 分类，$j$ 个子系统，概率为 $p_1=\frac{i}{n}\cdot\frac{j}{s}$
+-   $f_{i,j+1}$，发现一个 bug 属于已经发现的 $i$ 种 bug 分类，不属于已经发现的子系统，概率为 $p_2=\frac{i}{n}\cdot(1-\frac{j}{s})$
+-   $f_{i+1,j}$，发现一个 bug 不属于已经发现 bug 分类，属于 $j$ 个子系统，概率为 $p_3=(1-\frac{i}{n})\cdot\frac{j}{s}$
+-   $f_{i+1,j+1}$，发现一个 bug 不属于已经发现 bug 分类，不属于已经发现的子系统，概率为 $p_4=(1-\frac{i}{n})\cdot(1-\frac{j}{s})$
 
 再根据期望的线性性质，就可以得到状态转移方程：
 
@@ -80,7 +80,7 @@ $$
 
 考虑 $f_{i,j,0/1}$ 的状态转移：
 
-- 如果这一阶段不换，即 $f_{i,j,0}$。可能是由上一次不换的状态转移来的，那么就是 $f_{i-1,j,0}+w_{c_{i-1},c_{i}}$, 也有可能是由上一次交换的状态转移来的，这里结合条件概率和全概率的知识分析可以得到 $f_{i-1,j,1}+w_{d_{i-1},c_{i}}\cdot p_{i-1}+w_{c_{i-1},c_{i}}\cdot (1-p_{i-1})$，状态转移方程就有
+-   如果这一阶段不换，即 $f_{i,j,0}$。可能是由上一次不换的状态转移来的，那么就是 $f_{i-1,j,0}+w_{c_{i-1},c_{i}}$, 也有可能是由上一次交换的状态转移来的，这里结合条件概率和全概率的知识分析可以得到 $f_{i-1,j,1}+w_{d_{i-1},c_{i}}\cdot p_{i-1}+w_{c_{i-1},c_{i}}\cdot (1-p_{i-1})$，状态转移方程就有
 
 $$
 \begin{aligned}
@@ -88,7 +88,7 @@ f_{i,j,0}=min(f_{i-1,j,0}+w_{c_{i-1},c_{i}},f_{i-1,j,1}+w_{d_{i-1},c_{i}}\cdot p
 \end{aligned}
 $$
 
-- 如果这一阶段交换，即 $f_{i,j,1}$。类似地，可能由上一次不换的状态转移来，也可能由上一次交换的状态转移来。那么遇到不换的就乘上 $(1-p_i)$，遇到交换的就乘上 $p_i$，将所有会出现的情况都枚举一遍出进行计算就好了。这里不再赘述各种转移情况，相信通过上一种阶段例子，这里的状态转移应该能够很容易写出来。
+-   如果这一阶段交换，即 $f_{i,j,1}$。类似地，可能由上一次不换的状态转移来，也可能由上一次交换的状态转移来。那么遇到不换的就乘上 $(1-p_i)$，遇到交换的就乘上 $p_i$，将所有会出现的情况都枚举一遍出进行计算就好了。这里不再赘述各种转移情况，相信通过上一种阶段例子，这里的状态转移应该能够很容易写出来。
 
 #### 实现
 
@@ -101,11 +101,11 @@ $$
 
 ### 习题
 
-- [POJ2096 Collecting Bugs](http://poj.org/problem?id=2096)
-- [HDU3853 LOOPS](https://vjudge.net/problem/HDU-3853)
-- [HDU4035 Maze](https://vjudge.net/problem/HDU-4035)
-- [「NOIP2016」换教室](http://uoj.ac/problem/262)
-- [「SCOI2008」奖励关](https://www.luogu.com.cn/problem/P2473)
+-   [POJ2096 Collecting Bugs](http://poj.org/problem?id=2096)
+-   [HDU3853 LOOPS](https://vjudge.net/problem/HDU-3853)
+-   [HDU4035 Maze](https://vjudge.net/problem/HDU-4035)
+-   [「NOIP2016」换教室](http://uoj.ac/problem/262)
+-   [「SCOI2008」奖励关](https://www.luogu.com.cn/problem/P2473)
 
 ## 有后效性 DP
 
@@ -118,16 +118,16 @@ $$
 设 $f_{i,j}$ 为机器人机器人从第 i 行第 j 列出发到达第 $n$ 行的期望步数，最终状态为 $f_{n,j}=0$。
 由于机器人会等概率地选择停在原地，左移一步，右移一步，下移一步，考虑 $f_{i,j}$ 的状态转移：
 
-- $f_{i,1}=\frac{1}{3}\cdot(f_{i+1,1}+f_{i,2}+f_{i,1})+1$
-- $f_{i,j}=\frac{1}{4}\cdot(f_{i,j}+f_{i,j-1}+f_{i,j+1}+f_{i+1,j})+1$
-- $f_{i,m}=\frac{1}{3}\cdot(f_{i,m}+f_{i,m-1}+f_{i+1,m})+1$
+-   $f_{i,1}=\frac{1}{3}\cdot(f_{i+1,1}+f_{i,2}+f_{i,1})+1$
+-   $f_{i,j}=\frac{1}{4}\cdot(f_{i,j}+f_{i,j-1}+f_{i,j+1}+f_{i+1,j})+1$
+-   $f_{i,m}=\frac{1}{3}\cdot(f_{i,m}+f_{i,m-1}+f_{i+1,m})+1$
 
 在行之间由于只能向下移动，是满足无后效性的。在列之间可以左右移动，在移动过程中可能产生环，不满足无后效性。
 将方程变换后可以得到：
 
-- $2f_{i,1}-f_{i,2}=3+f_{i+1,1}$
-- $3f_{i,j}-f_{i,j-1}-f_{i,j+1}=4+f_{i+1,j}$
-- $2f_{i,m}-f_{i,m-1}=3+f_{i+1,m}$
+-   $2f_{i,1}-f_{i,2}=3+f_{i+1,1}$
+-   $3f_{i,j}-f_{i,j-1}-f_{i,j+1}=4+f_{i+1,j}$
+-   $2f_{i,m}-f_{i,m-1}=3+f_{i+1,m}$
 
 由于是逆序的递推，所以每一个 $f_{i+1,j}$ 是已知的。
 由于有 $m$ 列，所以右边相当于是一个 $m$ 行的列向量，那么左边就是 $m$ 行 $m$ 列的矩阵。使用增广矩阵，就变成了 m 行 m+1 列的矩阵，然后进行 [高斯消元](../math/linear-algebra/gauss.md) 即可解出答案。
@@ -194,9 +194,9 @@ $$
 
 ### 习题
 
-- [CodeForce 24 D Broken robot](https://codeforces.com/problemset/problem/24/D)
-- [HDU Time Travel](https://vjudge.net/problem/HDU-4418)
-- [「HNOI2013」游走](https://loj.ac/problem/2383)
+-   [CodeForce 24 D Broken robot](https://codeforces.com/problemset/problem/24/D)
+-   [HDU Time Travel](https://vjudge.net/problem/HDU-4418)
+-   [「HNOI2013」游走](https://loj.ac/problem/2383)
 
 ## 参考文献
 

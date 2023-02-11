@@ -56,9 +56,9 @@ int binary_search(int start, int end, int key) {
 
 要求满足某种条件的最大值的最小可能情况（最大值最小化），首先的想法是从小到大枚举这个作为答案的「最大值」，然后去判断是否合法。若答案单调，就可以使用二分搜索法来更快地找到答案。因此，要想使用二分搜索法来解这种「最大值最小化」的题目，需要满足以下三个条件：
 
-1. 答案在一个固定区间内；
-2. 可能查找一个符合条件的值不是很容易，但是要求能比较容易地判断某个值是否是符合条件的；
-3. 可行解对于区间满足一定的单调性。换言之，如果 $x$ 是符合条件的，那么有 $x + 1$ 或者 $x - 1$ 也符合条件。（这样下来就满足了上面提到的单调性）
+1.  答案在一个固定区间内；
+2.  可能查找一个符合条件的值不是很容易，但是要求能比较容易地判断某个值是否是符合条件的；
+3.  可行解对于区间满足一定的单调性。换言之，如果 $x$ 是符合条件的，那么有 $x + 1$ 或者 $x - 1$ 也符合条件。（这样下来就满足了上面提到的单调性）
 
 当然，最小值最大化是同理的。
 
@@ -80,8 +80,8 @@ bsearch 函数的返回值是查找到的元素的地址，该地址为 void 类
 
 注意：bsearch 与上文的 lower_bound 和 upper_bound 有两点不同：
 
-- 当符合条件的元素有重复多个的时候，会返回执行二分查找时第一个符合条件的元素，从而这个元素可能位于重复多个元素的中间部分。
-- 当查找不到相应的元素时，会返回 NULL。
+-   当符合条件的元素有重复多个的时候，会返回执行二分查找时第一个符合条件的元素，从而这个元素可能位于重复多个元素的中间部分。
+-   当查找不到相应的元素时，会返回 NULL。
 
 用 lower_bound 可以实现与 bsearch 完全相同的功能，所以可以使用 bsearch 通过的题目，直接改写成 lower_bound 同样可以实现。但是鉴于上述不同之处的第二点，例如，在序列 1、2、4、5、6 中查找 3，bsearch 实现 lower_bound 的功能会变得困难。
 
@@ -258,10 +258,10 @@ while (r - l > eps) {
 
 ### 习题
 
-- [Uva 1476 - Error Curves](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=447&page=show_problem&problem=4222)
-- [Uva 10385 - Duathlon](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=15&page=show_problem&problem=1326)
-- [UOJ 162 -【清华集训 2015】灯泡测试](https://uoj.ac/problem/162)
-- [洛谷 P7579 -「RdOI R2」称重（weigh）](https://www.luogu.com.cn/problem/P7579)
+-   [Uva 1476 - Error Curves](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=447&page=show_problem&problem=4222)
+-   [Uva 10385 - Duathlon](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=15&page=show_problem&problem=1326)
+-   [UOJ 162 -【清华集训 2015】灯泡测试](https://uoj.ac/problem/162)
+-   [洛谷 P7579 -「RdOI R2」称重（weigh）](https://www.luogu.com.cn/problem/P7579)
 
 ## 分数规划
 

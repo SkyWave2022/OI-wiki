@@ -26,19 +26,19 @@
 ???+note "证明"
     使用反证法。记出发节点为 $y$。设真实的直径是 $\delta(s,t)$，而从 $y$ 进行的第一次 DFS 到达的距离其最远的节点 $z$ 不为 $t$ 或 $s$。共分三种情况：
     
-    - 若 $y$ 在 $\delta(s,t)$ 上：
+    -   若 $y$ 在 $\delta(s,t)$ 上：
     
     ![y 在 s-t 上](./images/tree-diameter1.svg)
     
     有 $\delta(y,z) > \delta(y,t) \Longrightarrow \delta(x,z) > \delta(x,t) \Longrightarrow \delta(s,z) > \delta(s,t)$，与 $\delta(s,t)$ 为树上任意两节点之间最长的简单路径矛盾。
     
-    - 若 $y$ 不在 $\delta(s,t)$ 上，且 $\delta(y,z)$ 与 $\delta(s,t)$ 存在重合路径：
+    -   若 $y$ 不在 $\delta(s,t)$ 上，且 $\delta(y,z)$ 与 $\delta(s,t)$ 存在重合路径：
     
     ![y 不在 s-t 上，y-z 与 s-t 存在重合路径](./images/tree-diameter2.svg)
     
     有 $\delta(y,z) > \delta(y,t) \Longrightarrow \delta(x,z) > \delta(x,t) \Longrightarrow \delta(s,z) > \delta(s,t)$，与 $\delta(s,t)$ 为树上任意两节点之间最长的简单路径矛盾。
     
-    - 若 $y$ 不在 $\delta(s,t)$ 上，且 $\delta(y,z)$ 与 $\delta(s,t)$ 不存在重合路径：
+    -   若 $y$ 不在 $\delta(s,t)$ 上，且 $\delta(y,z)$ 与 $\delta(s,t)$ 不存在重合路径：
     
     ![y 不在 s-t 上，y-z 与 s-t 不存在重合路径](./images/tree-diameter3.svg)
     
@@ -144,11 +144,11 @@ int main() {
 
 ## 习题
 
-- [CodeChef, Diameter of Tree](https://www.codechef.com/problems/DTREE)
-- [Educational Codeforces Round 35, Problem F, Tree Destruction](https://codeforces.com/contest/911/problem/F)
-- [ZOJ 3820, Building Fire Stations](https://vjudge.net/problem/ZOJ-3820)
-- [CEOI2019/CodeForces 1192B. Dynamic Diameter](https://codeforces.com/contest/1192/problem/B)
-- [IPSC 2019 网络赛，Lightning Routing I](https://nanti.jisuanke.com/t/41398)
-- [NOIP2007 提高组 树网的核](https://www.luogu.com.cn/problem/P1099)
-- [SDOI2011 消防](https://www.luogu.com.cn/problem/P2491)
-- [APIO2010 巡逻](https://www.luogu.com.cn/problem/P3629)
+-   [CodeChef, Diameter of Tree](https://www.codechef.com/problems/DTREE)
+-   [Educational Codeforces Round 35, Problem F, Tree Destruction](https://codeforces.com/contest/911/problem/F)
+-   [ZOJ 3820, Building Fire Stations](https://vjudge.net/problem/ZOJ-3820)
+-   [CEOI2019/CodeForces 1192B. Dynamic Diameter](https://codeforces.com/contest/1192/problem/B)
+-   [IPSC 2019 网络赛，Lightning Routing I](https://nanti.jisuanke.com/t/41398)
+-   [NOIP2007 提高组 树网的核](https://www.luogu.com.cn/problem/P1099)
+-   [SDOI2011 消防](https://www.luogu.com.cn/problem/P2491)
+-   [APIO2010 巡逻](https://www.luogu.com.cn/problem/P3629)

@@ -47,10 +47,10 @@ Kate 可以自动识别当前文件使用的是什么编码，如果识别错误
 
 具体操作和其他编辑器并无太大差别，但是支持一些额外的特性，例如：
 
-1. 是否区分大小写
-2. 支持正则表达式（包括捕获组）
-3. 从当前文件到多文件再到当前工程不等的范围
-4. 对查找的结果进行选择替换
+1.  是否区分大小写
+2.  支持正则表达式（包括捕获组）
+3.  从当前文件到多文件再到当前工程不等的范围
+4.  对查找的结果进行选择替换
 
 ### Language Server Protocol
 
@@ -178,9 +178,9 @@ Kate 自 19.12 起支持 LSP Client，最初仅支持 C/C++、D、Fortran、Go�
 
 ## 相关外部链接
 
-- [The Kate Handbook](https://docs.kde.org/stable5/en/kate/kate/kate.pdf)
-- [关于如何手写自己的 LSP 客户端配置（英文）](https://docs.kde.org/trunk5/en/kate/kate/kate-application-plugin-lspclient.html#Configuration)
-- [关于如何手写自己的外部工具配置（英文）](https://docs.kde.org/trunk5/en/kate/kate/kate-application-plugin-external-tools.html)
+-   [The Kate Handbook](https://docs.kde.org/stable5/en/kate/kate/kate.pdf)
+-   [关于如何手写自己的 LSP 客户端配置（英文）](https://docs.kde.org/trunk5/en/kate/kate/kate-application-plugin-lspclient.html#Configuration)
+-   [关于如何手写自己的外部工具配置（英文）](https://docs.kde.org/trunk5/en/kate/kate/kate-application-plugin-external-tools.html)
 
 ## 参考资料与脚注
 

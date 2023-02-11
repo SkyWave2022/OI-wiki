@@ -66,8 +66,8 @@ struct Node {
 
 为了保证总的均摊复杂度，需要使用一个“两步走”的合并方法：
 
-1. 把儿子们两两配成一对，用 `meld` 操作把被配成同一对的两个儿子合并到一起（见下图 1)，
-2. 将新产生的堆 **从右往左**（即老的儿子到新的儿子的方向）挨个合并在一起（见下图 2）。
+1.  把儿子们两两配成一对，用 `meld` 操作把被配成同一对的两个儿子合并到一起（见下图 1)，
+2.  将新产生的堆 **从右往左**（即老的儿子到新的儿子的方向）挨个合并在一起（见下图 2）。
 
 ![](./images/pairingheap4.jpg)
 
@@ -89,9 +89,9 @@ struct Node {
 
 最后一句话是该函数的核心，这句话分三部分：
 
-1. `meld(x,y)`“配对”了 x 和 y。
-2. `merges(c)` 递归合并 c 和他的兄弟们。
-3. 将上面 2 个操作产生的 2 个新树合并。
+1.  `meld(x,y)`“配对”了 x 和 y。
+2.  `merges(c)` 递归合并 c 和他的兄弟们。
+3.  将上面 2 个操作产生的 2 个新树合并。
 
 需要注意到的是，上文提到了第二步时的合并方向是有要求的（从右往左合并），该递归函数的实现已保证了这个顺序，如果读者需要自行实现迭代版本的话请务必注意保证该顺序，否则复杂度将失去保证。
 
@@ -201,5 +201,5 @@ struct Node {
 
 [^ref4]: [Towards a Final Analysis of Pairing Heaps](http://web.eecs.umich.edu/~pettie/papers/focs05.pdf)
 
-- <https://en.wikipedia.org/wiki/Pairing_heap>
-- <https://brilliant.org/wiki/pairing-heap/>
+-   <https://en.wikipedia.org/wiki/Pairing_heap>
+-   <https://brilliant.org/wiki/pairing-heap/>

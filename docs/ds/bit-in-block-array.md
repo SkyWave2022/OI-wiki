@@ -9,8 +9,8 @@
 ???+ note "矩形区域查询"
     给出 $n$ 个二维平面中的点 $(x_i, y_i)$，其中 $1 \le i \le n, 1 \le x_i, y_i \le n, 1 \le n \le 10^5$, 要求实现以下中操作：
     
-    1. 给出 $a, b, c, d$，询问以 $(a, b)$ 为左上角，$c, d$ 为右下角的矩形区域内点的个数。
-    2. 给出 $x, y$，将横坐标为 $x$ 的点的纵坐标改为 $y$。
+    1.  给出 $a, b, c, d$，询问以 $(a, b)$ 为左上角，$c, d$ 为右下角的矩形区域内点的个数。
+    2.  给出 $x, y$，将横坐标为 $x$ 的点的纵坐标改为 $y$。
     
     题目 **强制在线**，保证 $x_i \ne x_j(1 \le i, j \le n, i \ne j)$。
 
@@ -57,8 +57,8 @@
 ???+ note " [Intersection of Permutations](https://codeforces.com/problemset/problem/1093/E) "
     给出两个排列 $a$ 和 $b$，要求实现以下两种操作：
     
-    1. 给出 $l_a, r_a, l_b, r_b$，要求查询既出现在 $a[l_a ... r_a]$ 又出现在 $b[l_b ... r_b]$ 中的元素的个数。
-    2. 给出 $x, y$，$swap(b_x, b_y)$。
+    1.  给出 $l_a, r_a, l_b, r_b$，要求查询既出现在 $a[l_a ... r_a]$ 又出现在 $b[l_b ... r_b]$ 中的元素的个数。
+    2.  给出 $x, y$，$swap(b_x, b_y)$。
     
     序列长度 $n$ 满足 $2 \le n \le 2 \cdot 10^5$，操作个数 $q$ 满足 $1 \le q \le 2 \cdot 10^5$。
 

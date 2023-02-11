@@ -383,8 +383,8 @@ int main(int argc, char* argv[]) {
 
 ## 参考
 
-1. [C++ reference](https://en.cppreference.com/)
-2. [C++ 参考手册](https://zh.cppreference.com/)
-3. [C++ in Visual Studio](https://docs.microsoft.com/en-us/cpp/overview/visual-cpp-in-visual-studio?view=vs-2019)
-4. [Variadic template](https://en.wikipedia.org/wiki/Variadic_template)
-5. [Variadic macros](https://en.wikipedia.org/wiki/Variadic_macro)
+1.  [C++ reference](https://en.cppreference.com/)
+2.  [C++ 参考手册](https://zh.cppreference.com/)
+3.  [C++ in Visual Studio](https://docs.microsoft.com/en-us/cpp/overview/visual-cpp-in-visual-studio?view=vs-2019)
+4.  [Variadic template](https://en.wikipedia.org/wiki/Variadic_template)
+5.  [Variadic macros](https://en.wikipedia.org/wiki/Variadic_macro)

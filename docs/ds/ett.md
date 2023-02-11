@@ -251,5 +251,5 @@ void Delete(int u, int v) {
 
 ## 参考资料
 
-- Dynamic trees as search trees via euler tours, applied to the network simplex algorithm - Robert E. Tarjan
-- Randomized fully dynamic graph algorithms with polylogarithmic time per operation - Henzinger et al.
+-   Dynamic trees as search trees via euler tours, applied to the network simplex algorithm - Robert E. Tarjan
+-   Randomized fully dynamic graph algorithms with polylogarithmic time per operation - Henzinger et al.

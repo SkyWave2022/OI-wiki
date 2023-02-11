@@ -395,14 +395,14 @@ $$
 
 其中 $k_n(x)$ 被称为核函数。不同的核函数会导出不同的生成函数，拥有不同的性质。举个例子：
 
-1. 普通生成函数：$k_n(x)=x^n$。
-2. 指数生成函数：$k_n(x)=\dfrac{x^n}{n!}$。
-3. 狄利克雷生成函数：$k_n(x)=\dfrac{1}{n^x}$。
+1.  普通生成函数：$k_n(x)=x^n$。
+2.  指数生成函数：$k_n(x)=\dfrac{x^n}{n!}$。
+3.  狄利克雷生成函数：$k_n(x)=\dfrac{1}{n^x}$。
 
 ## 参考资料与拓展阅读
 
-- [**Picks's Blog**](https://picks.logdown.com)
-- [**Miskcoo's Space**](https://blog.miskcoo.com)
-- [**Polynomial ring - Wikipedia**](https://en.wikipedia.org/wiki/Polynomial_ring)
-- [**Formal power series - Wikipedia**](https://en.wikipedia.org/wiki/Formal_power_series#The_ring_of_formal_power_series)
-- 《信息学竞赛中的生成函数计算理论框架》
+-   [**Picks's Blog**](https://picks.logdown.com)
+-   [**Miskcoo's Space**](https://blog.miskcoo.com)
+-   [**Polynomial ring - Wikipedia**](https://en.wikipedia.org/wiki/Polynomial_ring)
+-   [**Formal power series - Wikipedia**](https://en.wikipedia.org/wiki/Formal_power_series#The_ring_of_formal_power_series)
+-   《信息学竞赛中的生成函数计算理论框架》

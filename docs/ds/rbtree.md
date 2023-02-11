@@ -4,10 +4,10 @@
 
 一棵合法的红黑树必须遵循以下四条性质：
 
-1. 节点为红色或黑色
-2. NIL 节点（空叶子节点）为黑色
-3. 红色节点的子节点为黑色
-4. 从根节点到 NIL 节点的每条路径上的黑色节点数量相同
+1.  节点为红色或黑色
+2.  NIL 节点（空叶子节点）为黑色
+3.  红色节点的子节点为黑色
+4.  从根节点到 NIL 节点的每条路径上的黑色节点数量相同
 
 下图为一棵合法的红黑树：
 
@@ -151,8 +151,8 @@ class RBTreeMap {
 
 因此，这种情况的维护需要：
 
-1. 将 P，U 节点染黑，将 G 节点染红（可以保证每条路径上黑色节点个数不发生改变）。
-2. 递归维护 G 节点（因为不确定 G 的父节点的状态，递归维护可以确保性质 3 成立）。
+1.  将 P，U 节点染黑，将 G 节点染红（可以保证每条路径上黑色节点个数不发生改变）。
+2.  递归维护 G 节点（因为不确定 G 的父节点的状态，递归维护可以确保性质 3 成立）。
 
 ![rbtree-insert-case4](images/rbtree-insert-case4.png)
 
@@ -217,8 +217,8 @@ class RBTreeMap {
 
 因此，这种情况的维护需要：
 
-1. 若 N 为左子节点则左旋祖父节点 G，否则右旋祖父节点 G.（该操作使得旋转过后 P - N 这条路径上的黑色节点个数比 P - G - U 这条路径上少 1，暂时打破性质 4)。
-2. 重新染色，将 P 染黑，将 N 染红，同时满足了性质 3 和 4。
+1.  若 N 为左子节点则左旋祖父节点 G，否则右旋祖父节点 G.（该操作使得旋转过后 P - N 这条路径上的黑色节点个数比 P - G - U 这条路径上少 1，暂时打破性质 4)。
+2.  重新染色，将 P 染黑，将 N 染红，同时满足了性质 3 和 4。
 
 ![rbtree-insert-case6](images/rbtree-insert-case6.png)
 
@@ -369,9 +369,9 @@ class RBTreeMap {
 
 这种情况的维护需要：
 
-1. 若待删除节点 N 为左子节点，左旋 P; 若为右子节点，右旋 P。
-2. 将 S 染黑，P 染红（保证 S 节点的父节点满足性质 4)。
-3. 此时只需根据结构对以当前 P 节点为根的子树进行维护即可（无需再考虑旋转染色后的 S 和 D 节点）。
+1.  若待删除节点 N 为左子节点，左旋 P; 若为右子节点，右旋 P。
+2.  将 S 染黑，P 染红（保证 S 节点的父节点满足性质 4)。
+3.  此时只需根据结构对以当前 P 节点为根的子树进行维护即可（无需再考虑旋转染色后的 S 和 D 节点）。
 
 ![rbtree-remove-case1](images/rbtree-remove-case1.png)
 
@@ -459,9 +459,9 @@ class RBTreeMap {
 
 该过程分为三步：
 
-1. 若 N 为左子节点，右旋 P，否则左旋 P。
-2. 将节点 C 染红，将节点 S 染黑。
-3. 此时已满足 Case 5 的条件，进入 Case 5 完成后续维护。
+1.  若 N 为左子节点，右旋 P，否则左旋 P。
+2.  将节点 C 染红，将节点 S 染黑。
+3.  此时已满足 Case 5 的条件，进入 Case 5 完成后续维护。
 
 ![rbtree-remove-case4](images/rbtree-remove-case4.png)
 
@@ -499,9 +499,9 @@ class RBTreeMap {
 
 兄弟节点是黑色，且 close nephew 节点 C 为红色，distant nephew 节点 D 为黑色，父节点既可为红色又可为黑色。此时性质 4 无法满足，通过旋转操作使得黑色节点 S 变为该子树的根节点再进行染色即可满足性质 4。具体步骤如下：
 
-1. 若 N 为左子节点，左旋 P，反之右旋 P。
-2. 交换父节点 P 和兄弟节点 S 的颜色，此时性质 3 可能被打破。
-3. 将 distant nephew 节点 D 染黑，同时保证了性质 3 和 4。
+1.  若 N 为左子节点，左旋 P，反之右旋 P。
+2.  交换父节点 P 和兄弟节点 S 的颜色，此时性质 3 可能被打破。
+3.  将 distant nephew 节点 D 染黑，同时保证了性质 3 和 4。
 
 ![rbtree-remove-case5](images/rbtree-remove-case5.png)
 
@@ -550,7 +550,7 @@ class RBTreeMap {
 
 源码：
 
-- [linux/lib/rbtree.c](https://elixir.bootlin.com/linux/latest/source/lib/rbtree.c)
+-   [linux/lib/rbtree.c](https://elixir.bootlin.com/linux/latest/source/lib/rbtree.c)
 
 Linux 中的红黑树所有操作均使用循环迭代进行实现，保证效率的同时又增加了大量的注释来保证代码可读性，十分建议读者阅读学习。Linux 内核中的红黑树使用非常广泛，这里仅列举几个经典案例。
 
@@ -566,8 +566,8 @@ epoll 全称 event poll，是 Linux 内核实现 IO 多路复用 (IO multiplexin
 
 源码：
 
-- [nginx/src/core/ngx_rbtree.h](https://github.com/nginx/nginx/blob/master/src/core/ngx_rbtree.h)
-- [nginx/src/core/ngx_rbtree.c](https://github.com/nginx/nginx/blob/master/src/core/ngx_rbtree.c)
+-   [nginx/src/core/ngx_rbtree.h](https://github.com/nginx/nginx/blob/master/src/core/ngx_rbtree.h)
+-   [nginx/src/core/ngx_rbtree.c](https://github.com/nginx/nginx/blob/master/src/core/ngx_rbtree.c)
 
 nginx 中的用户态定时器是通过红黑树实现的。在 nginx 中，所有 timer 节点都由一棵红黑树进行维护，在 worker 进程的每一次循环中都会调用 `ngx_process_events_and_timers` 函数，在该函数中就会调用处理定时器的函数 `ngx_event_expire_timers`，每次该函数都不断的从红黑树中取出时间值最小的，查看他们是否已经超时，然后执行他们的函数，直到取出的节点的时间没有超时为止。
 
@@ -578,14 +578,14 @@ nginx 中的用户态定时器是通过红黑树实现的。在 nginx 中，所�
 源码：
 
 -   GNU libstdc++
-    - [libstdc++-v3/include/bits/stl_tree.h](https://github.com/gcc-mirror/gcc/blob/master/libstdc%2B%2B-v3/include/bits/stl_tree.h)
-    - [libstdc++-v3/src/c++98/tree.cc](https://github.com/gcc-mirror/gcc/blob/master/libstdc%2B%2B-v3/src/c%2B%2B98/tree.cc)
+    -   [libstdc++-v3/include/bits/stl_tree.h](https://github.com/gcc-mirror/gcc/blob/master/libstdc%2B%2B-v3/include/bits/stl_tree.h)
+    -   [libstdc++-v3/src/c++98/tree.cc](https://github.com/gcc-mirror/gcc/blob/master/libstdc%2B%2B-v3/src/c%2B%2B98/tree.cc)
 
 -   LLVM libcxx
-    - [libcxx/include/\_\_tree](https://github.com/llvm/llvm-project/blob/main/libcxx/include/__tree)
+    -   [libcxx/include/\_\_tree](https://github.com/llvm/llvm-project/blob/main/libcxx/include/__tree)
 
 -   Microsoft STL
-    - [stl/inc/xtree](https://github.com/microsoft/STL/blob/main/stl/inc/xtree)
+    -   [stl/inc/xtree](https://github.com/microsoft/STL/blob/main/stl/inc/xtree)
 
 大多数 STL 中的 `std::map` 和 `std::set` 的内部数据结构就是一棵红黑树（例如上面提到的这些）。不过值得注意的是，这些红黑树（包括可能有读者用过的 `std::_Rb_tree`) 都不是 C++ 标准，虽然部分竞赛（例如 NOIP) 并未命令禁止这类数据结构，但还是应当注意这类标准库中的非标准实现不应该在工程项目中直接使用。
 
@@ -595,9 +595,9 @@ nginx 中的用户态定时器是通过红黑树实现的。在 nginx 中，所�
 
 源码：
 
-- [java.util.TreeMap&lt;K, V>](https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/util/TreeMap.java)
-- [java.util.TreeSet&lt;K, V>](https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/util/TreeSet.java)
-- [java.util.HashMap&lt;K, V>](https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/util/HashMap.java)
+-   [java.util.TreeMap&lt;K, V>](https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/util/TreeMap.java)
+-   [java.util.TreeSet&lt;K, V>](https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/util/TreeSet.java)
+-   [java.util.HashMap&lt;K, V>](https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/util/HashMap.java)
 
 JDK 中的 `TreeMap` 和 `TreeSet` 都是使用红黑树作为底层数据结构的。同时在 JDK 1.8 之后 `HashMap` 内部哈希表中每个表项的链表长度超过 8 时也会自动转变为红黑树以提升查找效率。
 
@@ -614,5 +614,5 @@ JDK 中的 `TreeMap` 和 `TreeSet` 都是使用红黑树作为底层数据结构
 
 ## 其他资料
 
-- [Red-Black Tree - Wikipedia](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree)
-- [Red-Black Tree Visualization](https://www.cs.usfca.edu/~galles/visualization/RedBlack.html)
+-   [Red-Black Tree - Wikipedia](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree)
+-   [Red-Black Tree Visualization](https://www.cs.usfca.edu/~galles/visualization/RedBlack.html)

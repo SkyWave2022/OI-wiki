@@ -65,6 +65,6 @@ $$
 
 ## 习题
 
-- [「Luogu P1886」滑动窗口](https://loj.ac/problem/10175)
-- [「NOI2005」瑰丽华尔兹](https://www.luogu.com.cn/problem/P2254)
-- [「SCOI2010」股票交易](https://loj.ac/problem/10183)
+-   [「Luogu P1886」滑动窗口](https://loj.ac/problem/10175)
+-   [「NOI2005」瑰丽华尔兹](https://www.luogu.com.cn/problem/P2254)
+-   [「SCOI2010」股票交易](https://loj.ac/problem/10183)

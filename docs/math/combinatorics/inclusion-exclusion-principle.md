@@ -81,9 +81,9 @@ $$
 
 接着我们尝试抽象出容斥原理的模型：
 
-1. 全集 U：不定方程 $\sum_{i=1}^nx_i=m$ 的非负整数解
-2. 元素：变量 $x_i$.
-3. 属性：$x_i$ 的属性即 $x_i$ 满足的条件，即 $x_i\leq b_i$ 的条件
+1.  全集 U：不定方程 $\sum_{i=1}^nx_i=m$ 的非负整数解
+2.  元素：变量 $x_i$.
+3.  属性：$x_i$ 的属性即 $x_i$ 满足的条件，即 $x_i\leq b_i$ 的条件
 
 目标：所有变量满足对应属性时集合的大小，即 $|\bigcap_{i=1}^nS_i|$.
 
@@ -225,9 +225,9 @@ for (long long k = N; k >= 1; k--) {
 
 附赠三倍经验供大家练手。
 
-- [Luogu P2398 GCD SUM](https://www.luogu.com.cn/problem/P2398)
-- [Luogu P2158\[SDOI2008\]仪仗队](https://www.luogu.com.cn/problem/P2158)
-- [Luogu P1447\[NOI2010\]能量采集](https://www.luogu.com.cn/problem/P1447)
+-   [Luogu P2398 GCD SUM](https://www.luogu.com.cn/problem/P2398)
+-   [Luogu P2158\[SDOI2008\]仪仗队](https://www.luogu.com.cn/problem/P2158)
+-   [Luogu P1447\[NOI2010\]能量采集](https://www.luogu.com.cn/problem/P1447)
 
 ### 容斥原理推导欧拉函数
 
@@ -380,9 +380,9 @@ $$
 ??? note "全序关系"
     对于集合 $X$，若 $X$ 满足全序关系，则下列陈述对于任意 $a,b,c\in X$ 都成立：
     
-    - 反对称性：若 $a\le b$ 且 $b\le a$，则 $a=b$;
-    - 传递性：若 $a\le b$ 且 $b\le c$，则 $a\le c$；
-    - 完全性：$a\le b$ 或者 $b\le a$。
+    -   反对称性：若 $a\le b$ 且 $b\le a$，则 $a=b$;
+    -   传递性：若 $a\le b$ 且 $b\le c$，则 $a\le c$；
+    -   完全性：$a\le b$ 或者 $b\le a$。
 
 **证明：** 考虑做一个到一般容斥原理的映射。对于 $x\in S$，假设 $x$ 是第 $k$ 大的元素。那么我们定义一个映射 $f:x\mapsto \{1,2,\cdots,k\}$。显然这是一个双射。
 
@@ -542,8 +542,8 @@ $$
 
 考虑 $E(\min_{i\in T}x_i)$ 的含义，是第一次走到 $T$ 中某一个点的期望时间。不妨设 $f(i)$ 表示从结点 $i$ 出发，第一次走到 $T$ 中某个结点的期望时间。
 
-- 对于 $i\in T$，有 $f(i)=0$。
-- 对于 $i\notin T$，有 $f(i)=1+\frac{1}{\text{deg}(i)}\sum_{(i,j)\in E}f(j)$。
+-   对于 $i\in T$，有 $f(i)=0$。
+-   对于 $i\notin T$，有 $f(i)=1+\frac{1}{\text{deg}(i)}\sum_{(i,j)\in E}f(j)$。
 
 如果直接高斯消元，复杂度 $O(n^3)$。那么我们对每个 $T$ 都计算 $F(T)$ 的总复杂度就是 $O(2^nn^3)$，不能接受。我们使用树上消元的技巧。
 

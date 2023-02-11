@@ -129,8 +129,8 @@
 ???+note "证明"
     当我们求 $\gcd(a,b)$ 的时候，会遇到两种情况：
     
-    - $a < b$，这时候 $\gcd(a,b)=\gcd(b,a)$；
-    - $a \geq b$，这时候 $\gcd(a,b)=\gcd(b,a \bmod b)$，而对 $a$ 取模会让 $a$ 至少折半。这意味着这一过程最多发生 $O(\log n)$ 次。
+    -   $a < b$，这时候 $\gcd(a,b)=\gcd(b,a)$；
+    -   $a \geq b$，这时候 $\gcd(a,b)=\gcd(b,a \bmod b)$，而对 $a$ 取模会让 $a$ 至少折半。这意味着这一过程最多发生 $O(\log n)$ 次。
     
     第一种情况发生后一定会发生第二种情况，因此第一种情况的发生次数一定 **不多于** 第二种情况的发生次数。
     
@@ -393,6 +393,6 @@ int exgcd(int a, int b, int &x, int &y) {
 
 ## 应用
 
-- [10104 - Euclid Problem](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1045)
-- [GYM - (J) once upon a time](http://codeforces.com/gym/100963)
-- [UVA - 12775 - Gift Dilemma](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4628)
+-   [10104 - Euclid Problem](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1045)
+-   [GYM - (J) once upon a time](http://codeforces.com/gym/100963)
+-   [UVA - 12775 - Gift Dilemma](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4628)

@@ -18,9 +18,9 @@
 
 Garsia-Wachs 算法一般包括三个阶段：
 
-1. 构建一个值位于叶子的二叉树，注意顺序可能错误。
-2. 计算树中根到每个叶子的距离。
-3. 构建另一个二叉树，叶子的距离相同，但顺序正确。
+1.  构建一个值位于叶子的二叉树，注意顺序可能错误。
+2.  计算树中根到每个叶子的距离。
+3.  构建另一个二叉树，叶子的距离相同，但顺序正确。
 
 ![](./images/garsia-wachs.png)
 
@@ -30,9 +30,9 @@ Garsia-Wachs 算法一般包括三个阶段：
 
 第一阶段维护了一个由最初为每个非标志（non-sentinel）输入权重创建的单节点树组成的森林。每棵树都与一个值相关联，其叶子的权重之和为每个非标志输入权重构成一个树节点。为了维护这些值的序列，每端会有两个标记值。初始序列只是叶权重作为输入的顺序。然后重复执行以下步骤，每一步都减少输入序列的长度，直到只有一棵树包含了所有叶子：
 
-- 在序列中找到前三个连续的权重值 $x$，$y$，$z$ 使得 $x \leq z$。因为序列结尾的标志值大于之前的任意两个有限值，所以总是存在这样的三元组。
-- 从序列中移除 $x$ 和 $y$，并创建一个新的树节点作为 $x$ 和 $y$ 节点的父节点，值为 $x+y$。
-- 在原来 $x$ 的位置以前大于或等于 $x+y$ 且距 $x$ 最近的值的右边重新插入新节点。因为左标志值的存在，所以总是存在这样的位置。
+-   在序列中找到前三个连续的权重值 $x$，$y$，$z$ 使得 $x \leq z$。因为序列结尾的标志值大于之前的任意两个有限值，所以总是存在这样的三元组。
+-   从序列中移除 $x$ 和 $y$，并创建一个新的树节点作为 $x$ 和 $y$ 节点的父节点，值为 $x+y$。
+-   在原来 $x$ 的位置以前大于或等于 $x+y$ 且距 $x$ 最近的值的右边重新插入新节点。因为左标志值的存在，所以总是存在这样的位置。
 
 为了有效地实现这一阶段，该算法可以在任何平衡二叉查找树结构中维护当前值序列。这样的结构允许我们在对数时间内移除 $x$ 和 $y$，并重新插入它们的新父节点。在每一步中，数组中位于偶数索引上直到 $y$ 值的权重形成了一个递减序列，位于奇数索引位的权重形成另一个递减序列。因此，重新插入 $x+y$ 的位置可以通过在对数时间内对这两个递减序列使用平衡树执行两次二分查找找到。通过从前一个三元组 $z$ 值开始的线性顺序搜索，我们可以在总线性时间复杂度内执行对满足 $x \leq z$ 的第一个位置的搜索。
 
@@ -60,8 +60,8 @@ Garsia-Wachs 算法的第三阶段的证明，即存在另一棵具有相同距�
 
 ## 参考资料与拓展阅读
 
-- [1][Garsia–Wachs algorithm - Wikipedia](<https://en.wikipedia.org/wiki/Garsia%E2%80%93Wachs_algorithm>)
-- [2][Data.Algorithm.GarsiaWachs - Hackage Haskell](<https://hackage.haskell.org/package/garsia-wachs-1.2/docs/Data-Algorithm-GarsiaWachs.html>)
-- [3][garsia-wachs: A Functional Implementation of the Garsia-Wachs Algorithm - Wikipedia](<https://hackage.haskell.org/package/garsia-wachs>)
-- [4][Sentinel value - Wikipedia](<https://en.wikipedia.org/wiki/Sentinel_value>)
-- [5][A new proof of the Garsia-Wachs algorithm](<https://www.sciencedirect.com/science/article/abs/pii/0196677488900090>)
+-   [1][Garsia–Wachs algorithm - Wikipedia](<https://en.wikipedia.org/wiki/Garsia%E2%80%93Wachs_algorithm>)
+-   [2][Data.Algorithm.GarsiaWachs - Hackage Haskell](<https://hackage.haskell.org/package/garsia-wachs-1.2/docs/Data-Algorithm-GarsiaWachs.html>)
+-   [3][garsia-wachs: A Functional Implementation of the Garsia-Wachs Algorithm - Wikipedia](<https://hackage.haskell.org/package/garsia-wachs>)
+-   [4][Sentinel value - Wikipedia](<https://en.wikipedia.org/wiki/Sentinel_value>)
+-   [5][A new proof of the Garsia-Wachs algorithm](<https://www.sciencedirect.com/science/article/abs/pii/0196677488900090>)

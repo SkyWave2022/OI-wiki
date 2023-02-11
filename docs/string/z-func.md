@@ -14,9 +14,9 @@ author: LeoJacob, Marcythm, minghu6
 
 下面若干样例展示了对于不同字符串的 Z 函数：
 
-- $z(\mathtt{aaaaa}) = [0, 4, 3, 2, 1]$
-- $z(\mathtt{aaabaab}) = [0, 2, 1, 0, 2, 1, 0]$
-- $z(\mathtt{abacaba}) = [0, 0, 1, 0, 3, 0, 1]$
+-   $z(\mathtt{aaaaa}) = [0, 4, 3, 2, 1]$
+-   $z(\mathtt{aaabaab}) = [0, 2, 1, 0, 2, 1, 0]$
+-   $z(\mathtt{abacaba}) = [0, 0, 1, 0, 3, 0, 1]$
 
 ## 朴素算法
 
@@ -60,10 +60,10 @@ Z 函数的朴素算法复杂度为 $O(n^2)$：
 在计算 $z[i]$ 的过程中：
 
 -   如果 $i\le r$，那么根据 $[l,r]$ 的定义有 $s[i,r] = s[i-l,r-l]$，因此 $z[i]\ge \min(z[i-l],r-i+1)$。这时：
-    - 若 $z[i-l] < r-i+1$，则 $z[i] = z[i-l]$。
-    - 否则 $z[i-l]\ge r-i+1$，这时我们令 $z[i] = r-i+1$，然后暴力枚举下一个字符扩展 $z[i]$ 直到不能扩展为止。
-- 如果 $i>r$，那么我们直接按照朴素算法，从 $s[i]$ 开始比较，暴力求出 $z[i]$。
-- 在求出 $z[i]$ 后，如果 $i+z[i]-1>r$，我们就需要更新 $[l,r]$，即令 $l=i, r=i+z[i]-1$。
+    -   若 $z[i-l] < r-i+1$，则 $z[i] = z[i-l]$。
+    -   否则 $z[i-l]\ge r-i+1$，这时我们令 $z[i] = r-i+1$，然后暴力枚举下一个字符扩展 $z[i]$ 直到不能扩展为止。
+-   如果 $i>r$，那么我们直接按照朴素算法，从 $s[i]$ 开始比较，暴力求出 $z[i]$。
+-   在求出 $z[i]$ 后，如果 $i+z[i]-1>r$，我们就需要更新 $[l,r]$，即令 $l=i, r=i+z[i]-1$。
 
 可以访问 [这个网站](https://personal.utdallas.edu/~besp/demo/John2010/z-algorithm.htm) 来看 Z 函数的模拟过程。
 
@@ -158,14 +158,14 @@ Z 函数的朴素算法复杂度为 $O(n^2)$：
 
 ## 练习题目
 
-- [CF126B Password](http://codeforces.com/problemset/problem/126/B)
-- [UVA # 455 Periodic Strings](http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=396)
-- [UVA # 11022 String Factoring](http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1963)
-- [UVa 11475 - Extend to Palindrome](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2470)
-- [LA 6439 - Pasti Pas!](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=588&page=show_problem&problem=4450)
-- [Codechef - Chef and Strings](https://www.codechef.com/problems/CHSTR)
-- [Codeforces - Prefixes and Suffixes](http://codeforces.com/problemset/problem/432/D)
-- [Leetcode 2223 - Sum of Scores of Built Strings](https://leetcode.com/problems/sum-of-scores-of-built-strings/)
+-   [CF126B Password](http://codeforces.com/problemset/problem/126/B)
+-   [UVA # 455 Periodic Strings](http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=396)
+-   [UVA # 11022 String Factoring](http://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1963)
+-   [UVa 11475 - Extend to Palindrome](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=2470)
+-   [LA 6439 - Pasti Pas!](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=588&page=show_problem&problem=4450)
+-   [Codechef - Chef and Strings](https://www.codechef.com/problems/CHSTR)
+-   [Codeforces - Prefixes and Suffixes](http://codeforces.com/problemset/problem/432/D)
+-   [Leetcode 2223 - Sum of Scores of Built Strings](https://leetcode.com/problems/sum-of-scores-of-built-strings/)
 
 * * *
 

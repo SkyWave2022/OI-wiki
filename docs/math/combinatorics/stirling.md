@@ -17,8 +17,8 @@ $$
 
 我们插入一个新元素时，有两种方案：
 
-- 将新元素单独放入一个子集，有 $\begin{Bmatrix}n-1\\ k-1\end{Bmatrix}$ 种方案；
-- 将新元素放入一个现有的非空子集，有 $k\begin{Bmatrix}n-1\\ k\end{Bmatrix}$ 种方案。
+-   将新元素单独放入一个子集，有 $\begin{Bmatrix}n-1\\ k-1\end{Bmatrix}$ 种方案；
+-   将新元素放入一个现有的非空子集，有 $k\begin{Bmatrix}n-1\\ k\end{Bmatrix}$ 种方案。
 
 根据加法原理，将两式相加即可得到递推式。
 
@@ -710,8 +710,8 @@ $$
 
 我们插入一个新元素时，有两种方案：
 
-- 将该新元素置于一个单独的轮换中，共有 $\begin{bmatrix}n-1\\ k-1\end{bmatrix}$ 种方案；
-- 将该元素插入到任何一个现有的轮换中，共有 $(n-1)\begin{bmatrix}n-1\\ k\end{bmatrix}$ 种方案。
+-   将该新元素置于一个单独的轮换中，共有 $\begin{bmatrix}n-1\\ k-1\end{bmatrix}$ 种方案；
+-   将该元素插入到任何一个现有的轮换中，共有 $(n-1)\begin{bmatrix}n-1\\ k\end{bmatrix}$ 种方案。
 
 根据加法原理，将两式相加即可得到递推式。
 
@@ -830,11 +830,11 @@ $$
 
 ## 习题
 
-- [HDU3625 Examining the Rooms](https://vjudge.net/problem/HDU-3625)
-- [UOJ540 联合省选 2020 组合数问题](https://uoj.ac/problem/540)
-- [UOJ269 清华集训 2016 如何优雅地求和](https://uoj.ac/problem/269)
+-   [HDU3625 Examining the Rooms](https://vjudge.net/problem/HDU-3625)
+-   [UOJ540 联合省选 2020 组合数问题](https://uoj.ac/problem/540)
+-   [UOJ269 清华集训 2016 如何优雅地求和](https://uoj.ac/problem/269)
 
 ## 参考资料与注释
 
-1. [Stirling Number of the First Kind - Wolfram MathWorld](http://mathworld.wolfram.com/StirlingNumberoftheFirstKind.html)
-2. [Stirling Number of the Second Kind - Wolfram MathWorld](http://mathworld.wolfram.com/StirlingNumberoftheSecondKind.html)
+1.  [Stirling Number of the First Kind - Wolfram MathWorld](http://mathworld.wolfram.com/StirlingNumberoftheFirstKind.html)
+2.  [Stirling Number of the Second Kind - Wolfram MathWorld](http://mathworld.wolfram.com/StirlingNumberoftheSecondKind.html)

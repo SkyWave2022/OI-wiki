@@ -12,10 +12,10 @@ author: StudyingFather, Backl1ght, countercurrent-time, Ir1d, greyqz, MicDZ, ouu
 
 dfs 一棵树，然后如果 dfs 到 x 点，就 `push_back(x)`，dfs 完 x 点，就直接 `push_back(-x)`，然后我们在挪动指针的时候，
 
-- 新加入的值是 x  --->`add(x)`
-- 新加入的值是 - x --->`del(x)`
-- 新删除的值是 x  --->`del(x)`
-- 新删除的值是 - x --->`add(x)`
+-   新加入的值是 x  --->`add(x)`
+-   新加入的值是 - x --->`del(x)`
+-   新删除的值是 x  --->`del(x)`
+-   新删除的值是 - x --->`add(x)`
 
 这样的话，我们就把一棵树处理成了序列。
 
@@ -218,10 +218,10 @@ dfs 一棵树，然后如果 dfs 到 x 点，就 `push_back(x)`，dfs 完 x 点�
 
 条件：
 
-- 属于同一块的节点之间的距离不超过给定块的大小
-- 每个块中的节点不能太多也不能太少
-- 每个节点都要属于一个块
-- 编号相邻的块之间的距离不能太大
+-   属于同一块的节点之间的距离不超过给定块的大小
+-   每个块中的节点不能太多也不能太少
+-   每个节点都要属于一个块
+-   编号相邻的块之间的距离不能太大
 
 了解了这些条件后，我们看到这样一道题 [「SCOI2005」王室联邦](https://loj.ac/problem/2152)。
 
@@ -300,8 +300,8 @@ if (!sta.empty()) {
 
 设块的大小为 $unit$：
 
-- 对于 x 指针，由于每个块中节点的距离在 $unit$ 左右，每个块中 x 指针移动 $unit^2$ 次（$unit\times dis_{\max}$），共计 $n\times unit$ 次（$unit^2 \times (\frac{n}{unit})$）；
-- 对于 y 指针，每个块中最多移动 $O(n)$ 次，共计 $\frac{n^2}{unit}$ 次（$n \times (\frac{n}{unit})$）。
+-   对于 x 指针，由于每个块中节点的距离在 $unit$ 左右，每个块中 x 指针移动 $unit^2$ 次（$unit\times dis_{\max}$），共计 $n\times unit$ 次（$unit^2 \times (\frac{n}{unit})$）；
+-   对于 y 指针，每个块中最多移动 $O(n)$ 次，共计 $\frac{n^2}{unit}$ 次（$n \times (\frac{n}{unit})$）。
 
 加起来大概在根号处取得最小值（由于树上莫队块的大小不固定，所以不一定要严格按照）。
 

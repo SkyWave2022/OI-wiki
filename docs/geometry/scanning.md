@@ -18,10 +18,10 @@
 
 ![](./images/scanning.svg)
 
-- 如图所示，我们可以把整个矩形分成如图各个颜色不同的小矩形，那么这个小矩形的高就是我们扫过的距离，那么剩下了一个变量，那就是矩形的长一直在变化。
-- 我们的线段树就是为了维护矩形的长，我们给每一个矩形的上下边进行标记，下面的边标记为 1，上面的边标记为 -1，每遇到一个矩形时，我们知道了标记为 1 的边，我们就加进来这一条矩形的长，等到扫描到 -1 时，证明这一条边需要删除，就删去，利用 1 和 -1 可以轻松的到这种状态。
-- 还要注意这里的线段树指的并不是线段的一个端点，而指的是一个区间，所以我们要计算的是 $r+1$ 和 $r-1$。
-- 需要 [离散化](../misc/discrete.md)。
+-   如图所示，我们可以把整个矩形分成如图各个颜色不同的小矩形，那么这个小矩形的高就是我们扫过的距离，那么剩下了一个变量，那就是矩形的长一直在变化。
+-   我们的线段树就是为了维护矩形的长，我们给每一个矩形的上下边进行标记，下面的边标记为 1，上面的边标记为 -1，每遇到一个矩形时，我们知道了标记为 1 的边，我们就加进来这一条矩形的长，等到扫描到 -1 时，证明这一条边需要删除，就删去，利用 1 和 -1 可以轻松的到这种状态。
+-   还要注意这里的线段树指的并不是线段的一个端点，而指的是一个区间，所以我们要计算的是 $r+1$ 和 $r-1$。
+-   需要 [离散化](../misc/discrete.md)。
 
 ### 实现
 
@@ -122,13 +122,13 @@
 
 ## 练习
 
-- [「POJ1151」Atlantis](http://poj.org/problem?id=1151)
+-   [「POJ1151」Atlantis](http://poj.org/problem?id=1151)
 
-- [「POJ1177」Picture](http://poj.org/problem?id=1177)
+-   [「POJ1177」Picture](http://poj.org/problem?id=1177)
 
-- [「POJ3832」Posters](http://poj.org/problem?id=3832)
+-   [「POJ3832」Posters](http://poj.org/problem?id=3832)
 
-- [洛谷 P1856\[IOI1998\]\[USACO5.5\]矩形周长 Picture](https://www.luogu.com.cn/problem/P1856)
+-   [洛谷 P1856\[IOI1998\]\[USACO5.5\]矩形周长 Picture](https://www.luogu.com.cn/problem/P1856)
 
 ## B 维正交范围
 
@@ -188,22 +188,22 @@ B 维正交范围指在一个 B 维直角坐标系下，第 $i$ 维坐标在一�
 
 ### 例题
 
-- [洛谷 P8593「KDOI-02」一个弹的投](https://www.luogu.com.cn/problem/P8593) 逆序对的应用。
+-   [洛谷 P8593「KDOI-02」一个弹的投](https://www.luogu.com.cn/problem/P8593) 逆序对的应用。
 
-- [AcWing 4709. 三元组](https://www.acwing.com/problem/content/4712/) 上题的弱化版，同样为逆序对的应用。
+-   [AcWing 4709. 三元组](https://www.acwing.com/problem/content/4712/) 上题的弱化版，同样为逆序对的应用。
 
-- [洛谷 P8773\[蓝桥杯 2022 省 A\]选数异或](https://www.luogu.com.cn/problem/P8773) HH 的项链魔改版。
+-   [洛谷 P8773\[蓝桥杯 2022 省 A\]选数异或](https://www.luogu.com.cn/problem/P8773) HH 的项链魔改版。
 
-- [洛谷 P8844\[传智杯 #4 初赛\]小卡与落叶](https://www.luogu.com.cn/problem/P8844) 树上问题转序列问题然后进行二维数点。
+-   [洛谷 P8844\[传智杯 #4 初赛\]小卡与落叶](https://www.luogu.com.cn/problem/P8844) 树上问题转序列问题然后进行二维数点。
 
 总而言之，二维数点的主要思路就是数据结构维护一维，然后枚举另一维。
 
 ## 参考资料
 
-- <https://www.cnblogs.com/yangsongyi/p/8378629.html>
+-   <https://www.cnblogs.com/yangsongyi/p/8378629.html>
 
-- <https://blog.csdn.net/riba2534/article/details/76851233>
+-   <https://blog.csdn.net/riba2534/article/details/76851233>
 
-- <https://blog.csdn.net/winddreams/article/details/38495093>
+-   <https://blog.csdn.net/winddreams/article/details/38495093>
 
-- <https://dregen-yor.cf/2022/10/01/sao-miao-xian>
+-   <https://dregen-yor.cf/2022/10/01/sao-miao-xian>

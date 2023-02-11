@@ -13,15 +13,15 @@
 ???+ note "任务"
     输入：一个形如 `a <op> b` 的表达式。
     
-    - `a`、`b` 分别是长度不超过 $1000$ 的十进制非负整数；
-    - `<op>` 是一个字符（`+`、`-`、`*` 或 `/`），表示运算。
-    - 整数与运算符之间由一个空格分隔。
+    -   `a`、`b` 分别是长度不超过 $1000$ 的十进制非负整数；
+    -   `<op>` 是一个字符（`+`、`-`、`*` 或 `/`），表示运算。
+    -   整数与运算符之间由一个空格分隔。
     
     输出：运算结果。
     
-    - 对于 `+`、`-`、`*` 运算，输出一行表示结果；
-    - 对于 `/` 运算，输出两行分别表示商和余数。
-    - 保证结果均为非负整数。
+    -   对于 `+`、`-`、`*` 运算，输出一行表示结果；
+    -   对于 `/` 运算，输出两行分别表示商和余数。
+    -   保证结果均为非负整数。
 
 ## 存储
 
@@ -606,9 +606,9 @@ void div(int a[], int b[], int c[], int d[]) {
 
 另外，由于估的商总是小于等于实际商，所以还有再进一步优化的空间。绝大多数情况下每个位只估商一次，这样在下一个位估商时，虽然得到的商有可能因为前一位的误差造成试商结果大于等于 base，但这没有关系，只要在最后再最后做统一进位便可。举个例子，假设 base 是 10，求 $395081/9876$，试商计算步骤如下：
 
-1. 首先试商计算得到 $3950/988=3$，于是 $395081-(9876 \times 3 \times 10^1) = 98801$，这一步出现了误差，但不用管，继续下一步计算。
-2. 对余数 98801 继续试商计算得到 $9880/988=10$，于是 $98801-(9876 \times 10 \times 10^0) = 41$，这就是最终余数。
-3. 把试商过程的结果加起来并处理进位，即 $3 \times 10^1 + 10 \times 10^0 = 40$ 便是准确的商。
+1.  首先试商计算得到 $3950/988=3$，于是 $395081-(9876 \times 3 \times 10^1) = 98801$，这一步出现了误差，但不用管，继续下一步计算。
+2.  对余数 98801 继续试商计算得到 $9880/988=10$，于是 $98801-(9876 \times 10 \times 10^0) = 41$，这就是最终余数。
+3.  把试商过程的结果加起来并处理进位，即 $3 \times 10^1 + 10 \times 10^0 = 40$ 便是准确的商。
 
 方法虽然看着简单，但具体实现上很容易进坑，所以以下提供一个经过多番验证确认没有问题的实现供大家参考，要注意的细节也写在注释当中。
 
@@ -1016,9 +1016,9 @@ $$
 
 ## 习题
 
-- [NOIP 2012 国王游戏](https://loj.ac/problem/2603)
-- [SPOJ - Fast Multiplication](http://www.spoj.com/problems/MUL/en/)
-- [SPOJ - GCD2](http://www.spoj.com/problems/GCD2/)
-- [UVA - Division](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1024)
-- [UVA - Fibonacci Freeze](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=436)
-- [Codeforces - Notepad](http://codeforces.com/contest/17/problem/D)
+-   [NOIP 2012 国王游戏](https://loj.ac/problem/2603)
+-   [SPOJ - Fast Multiplication](http://www.spoj.com/problems/MUL/en/)
+-   [SPOJ - GCD2](http://www.spoj.com/problems/GCD2/)
+-   [UVA - Division](https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1024)
+-   [UVA - Fibonacci Freeze](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=436)
+-   [Codeforces - Notepad](http://codeforces.com/contest/17/problem/D)

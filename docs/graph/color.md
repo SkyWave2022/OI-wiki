@@ -51,10 +51,10 @@ $\deg(v_i)\geq\deg(v_{i+1}),~\forall 1\leq i\leq n-1$
 
 #### 过程
 
-1. 将当前未着色的点按度数降序排列。
-2. 将第一个点染成一个未被使用的颜色。
-3. 顺次遍历接下来的点，若当前点和所有与第一个点颜色 **相同** 的点 **不相邻**，则将该点染成与第一个点相同的颜色。
-4. 若仍有未着色的点，则回到步骤 1, 否则结束。
+1.  将当前未着色的点按度数降序排列。
+2.  将第一个点染成一个未被使用的颜色。
+3.  顺次遍历接下来的点，若当前点和所有与第一个点颜色 **相同** 的点 **不相邻**，则将该点染成与第一个点相同的颜色。
+4.  若仍有未着色的点，则回到步骤 1, 否则结束。
 
 示例如下：
 
@@ -99,21 +99,21 @@ $\deg(v_i)\geq\deg(v_{i+1}),~\forall 1\leq i\leq n-1$
     
     令 $V_0=\varnothing$, 我们取 $V(G)\setminus\bigcup_{i=0}^{m-1} V_i$ 中的子集 $V_m$, 其中的元素满足
     
-    1. $v_{k_m}\in V_m$, 其中 $k_m=\min\{k:v_k\notin\bigcup_{i=0}^{m-1} V_i\}$
+    1.  $v_{k_m}\in V_m$, 其中 $k_m=\min\{k:v_k\notin\bigcup_{i=0}^{m-1} V_i\}$
     2.  若
     
         $\{v_{i_{m,1}},v_{i_{m,2}},\dots,v_{i_{m,l_m}}\}\subset V_m,~i_{m,1}<i_{m,2}<\dots<i_{m,l_m}$
     
         则 $v_j\in V_m$ 当且仅当
     
-        1. $j>i_{m,l_m}$
-        2. $v_j$ 与 $v_{i_{m,1}},v_{i_{m,2}},\dots,v_{i_{m,l_m}}$ 均不相邻
+        1.  $j>i_{m,l_m}$
+        2.  $v_j$ 与 $v_{i_{m,1}},v_{i_{m,2}},\dots,v_{i_{m,l_m}}$ 均不相邻
     
     显然若将 $V_i$ 中的点染成第 i 种颜色，则该染色方案即为 Welsh—Powell 算法给出的方案，显然有
     
-    - $V_1\neq\varnothing$
-    - $V_i\cap V_j=\varnothing\iff i\neq j$
-    - $\exists \alpha(G)\in\Bbb{N}^*,\forall i>\alpha(G),~s.t.~ V_i=\varnothing$
+    -   $V_1\neq\varnothing$
+    -   $V_i\cap V_j=\varnothing\iff i\neq j$
+    -   $\exists \alpha(G)\in\Bbb{N}^*,\forall i>\alpha(G),~s.t.~ V_i=\varnothing$
     
     我们只需要证明：
     
@@ -201,8 +201,8 @@ $P(N_n, k) = k^n$
 
 在无向无环图 G 中，
 
-1. $e=(v_i, v_j) \notin E(G)$，则 $P(G, k) = P(G \cup e, k)+P(G\setminus e, k)$
-2. $e=(v_i, v_j) \in E(G)$，则 $P(G,k)=P(G-e,k)-P(G\setminus e,k)$
+1.  $e=(v_i, v_j) \notin E(G)$，则 $P(G, k) = P(G \cup e, k)+P(G\setminus e, k)$
+2.  $e=(v_i, v_j) \in E(G)$，则 $P(G,k)=P(G-e,k)-P(G\setminus e,k)$
 
 定理：设 $V_1$ 是 G 的点割集，且 $G[V_1]$ 是 G 的 $|V_1|$ 阶完全子图，$G-V_1$ 有 $p(p \geq 2)$ 个连通分支，则：
 
@@ -212,5 +212,5 @@ $P(G,k)=\frac{\Pi_{i=1}^{p}{(P(H_i, k))}}{P(G[V_1], k)^{p-1}}$
 
 ## 参考资料
 
-1. [Graph coloring - Wikipedia](https://en.wikipedia.org/wiki/Graph_coloring)
-2. Welsh, D. J. A.; Powell, M. B. (1967), "[An upper bound for the chromatic number of a graph and its application to timetabling problems](https://doi.org/10.1093%2Fcomjnl%2F10.1.85)", The Computer Journal, 10 (1): 85–86
+1.  [Graph coloring - Wikipedia](https://en.wikipedia.org/wiki/Graph_coloring)
+2.  Welsh, D. J. A.; Powell, M. B. (1967), "[An upper bound for the chromatic number of a graph and its application to timetabling problems](https://doi.org/10.1093%2Fcomjnl%2F10.1.85)", The Computer Journal, 10 (1): 85–86

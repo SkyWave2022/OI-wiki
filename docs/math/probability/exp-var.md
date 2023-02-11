@@ -57,8 +57,8 @@ $$
 
 若随机变量 $X, Y$ 的期望存在，则
 
-- 对任意实数 $a, b$，有 $E(aX + b) = a \cdot EX + b$。
-- $E(X + Y) = EX + EY$。
+-   对任意实数 $a, b$，有 $E(aX + b) = a \cdot EX + b$。
+-   $E(X + Y) = EX + EY$。
 
 #### 随机变量乘积的期望
 
@@ -175,15 +175,15 @@ $$
 
 若随机变量 $X$ 的方差存在，则
 
-- 对任意常数 $a, b$ 都有 $D(aX + b) = a^2 \cdot DX$
-- $DX = E(X^2) - (EX)^2$
+-   对任意常数 $a, b$ 都有 $D(aX + b) = a^2 \cdot DX$
+-   $DX = E(X^2) - (EX)^2$
 
 ## 协方差与相关系数
 
 一般来说，等式 $D(X + Y) = DX + DY$ 并不成立，我们自然会提出两个问题：
 
-- $D(X + Y)$ 与 $DX + DY$ 之间相差的部分到底是什么。
-- $D(X + Y)$ 与 $DX + DY$ 在什么情况下相等。
+-   $D(X + Y)$ 与 $DX + DY$ 之间相差的部分到底是什么。
+-   $D(X + Y)$ 与 $DX + DY$ 在什么情况下相等。
 
 对于第一个问题，我们引入协方差作为解答。
 
@@ -201,13 +201,13 @@ $$
 
 对于随机变量 $X, Y, Z$，有
 
-- $\operatorname{Cov}(X, Y) = \operatorname{Cov}(Y, X)$
-- 对任意常数 $a, b$，有 $\operatorname{Cov}(aX + bY, Z) = a \cdot \operatorname{Cov}(X, Z) + b \cdot \operatorname{Cov}(Y, Z)$
+-   $\operatorname{Cov}(X, Y) = \operatorname{Cov}(Y, X)$
+-   对任意常数 $a, b$，有 $\operatorname{Cov}(aX + bY, Z) = a \cdot \operatorname{Cov}(X, Z) + b \cdot \operatorname{Cov}(Y, Z)$
 
 同时协方差与方差也有如下联系：
 
-- $DX = \operatorname{Cov}(X, X)$
-- $D(X + Y) = DX + 2 \operatorname{Cov}(X, Y) + DY$
+-   $DX = \operatorname{Cov}(X, X)$
+-   $D(X + Y) = DX + 2 \operatorname{Cov}(X, Y) + DY$
 
 !!! note "关于协方差"
     你可能会发现协方差的性质与向量内积的运算性质在形式上高度一致。
@@ -234,8 +234,8 @@ $$
 
 Pearson 相关系数描述了两个随机变量之间线性关联的紧密程度。$|\rho_{X,Y}|$ 越大，则 $X$ 与 $Y$ 之间的线性关联程度越强。不难证明 $|\rho_{X,Y}| \leq 1$，且 $|\rho_{X,Y}| = 1$ 仅可能出现在以下两种情况
 
-- 当存在实数 $a$ 和正实数 $b$ 使得 $P(X = a + bY) = 1$ 时，有 $\rho_{X,Y} = 1$；
-- 当存在实数 $a$ 和负实数 $b$ 使得 $P(X = a + bY) = 1$ 时，有 $\rho_{X,Y} = -1$。
+-   当存在实数 $a$ 和正实数 $b$ 使得 $P(X = a + bY) = 1$ 时，有 $\rho_{X,Y} = 1$；
+-   当存在实数 $a$ 和负实数 $b$ 使得 $P(X = a + bY) = 1$ 时，有 $\rho_{X,Y} = -1$。
 
 当 $\rho_{X,Y} = 0$ 时我们称随机变量 $X$ 与 $Y$  **不相关**，此时 $X$ 和 $Y$ 之间不存在线性关系。
 

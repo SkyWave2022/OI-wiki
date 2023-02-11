@@ -61,14 +61,14 @@ ST 并不支持中文，如需中文需要安装汉化插件。
 
 插件推荐：
 
-- BracketHighlighter : 对原版的括号高亮进行了增强，必备。
-- C++ Snippets : ST 自带有 C++ 代码补全，格式为大括号不换行。如果不习惯自带大括号换行的码风可以安装这个插件，同时增加了一部分补全。
-- C++ 11 : 支持 C++ 11 标准高亮（ST4 中不需要）。
-- SublimeAstyleFormatter : Astyle，用于格式化代码。
-- Diffy : 按<kbd>Ctrl</kbd>+<kbd>K</kbd>&<kbd>Ctrl</kbd>+<kbd>D</kbd>即可快速比较第一视窗与第二视窗打开的文件的不同，比较方式为逐行比较。
-- ConvertToUTF8 : 自动识别文件编码，并支持编码转换。
-- SideBarEnhancements : 侧边栏增强，较为推荐。
-- Transparency : 窗口透明化。
+-   BracketHighlighter : 对原版的括号高亮进行了增强，必备。
+-   C++ Snippets : ST 自带有 C++ 代码补全，格式为大括号不换行。如果不习惯自带大括号换行的码风可以安装这个插件，同时增加了一部分补全。
+-   C++ 11 : 支持 C++ 11 标准高亮（ST4 中不需要）。
+-   SublimeAstyleFormatter : Astyle，用于格式化代码。
+-   Diffy : 按<kbd>Ctrl</kbd>+<kbd>K</kbd>&<kbd>Ctrl</kbd>+<kbd>D</kbd>即可快速比较第一视窗与第二视窗打开的文件的不同，比较方式为逐行比较。
+-   ConvertToUTF8 : 自动识别文件编码，并支持编码转换。
+-   SideBarEnhancements : 侧边栏增强，较为推荐。
+-   Transparency : 窗口透明化。
 
 有其他需要可以尝试搜索。
 
@@ -113,13 +113,13 @@ Vintage 插件默认是禁用的。可以通过 `首选项->设置` 在用户设
 
 ST 的 Vintage 插件与 Vi 有一定不同，部分列于此处：
 
-- 在插入模式下用选中不会进入可视模式，这时输入不会被识别为命令而是直接替换文本。可视模式只有命令模式下才能进入。
-- `r`、`R`、`zA`、`za`、`zi`、`z=`、`@` 与使用<kbd>[</kbd>、<kbd>]</kbd>或<kbd>"</kbd>键的命令不存在。
-- 使用<kbd>Ctrl</kbd>、<kbd>Shift</kbd>和<kbd>Alt</kbd>键的快捷键会保留为 ST 设置的快捷键，如<kbd>Ctrl</kbd>+<kbd>V</kbd>不会进入可视模式而是正常粘贴。
-- 命令行模式只保留了 `:e`、`:0`、`:$`、`:s`。
-- 使用 `\` 与 `?` 命令会自动唤出搜索框，而不是直接在命令中键入单词进行搜索。同时，数字将无法生效。
-- `q` 宏录制命令会启动 ST 自带的宏录制，按<kbd>Q</kbd>后需要再按一个键启动录制，但录制的宏不会与该键绑定，需要按<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Q</kbd>才能启动。如果需要保存，需要 `工具->保存宏`，快捷键需要设置。
-- 无法使用 `数字+.` 的组合。
+-   在插入模式下用选中不会进入可视模式，这时输入不会被识别为命令而是直接替换文本。可视模式只有命令模式下才能进入。
+-   `r`、`R`、`zA`、`za`、`zi`、`z=`、`@` 与使用<kbd>[</kbd>、<kbd>]</kbd>或<kbd>"</kbd>键的命令不存在。
+-   使用<kbd>Ctrl</kbd>、<kbd>Shift</kbd>和<kbd>Alt</kbd>键的快捷键会保留为 ST 设置的快捷键，如<kbd>Ctrl</kbd>+<kbd>V</kbd>不会进入可视模式而是正常粘贴。
+-   命令行模式只保留了 `:e`、`:0`、`:$`、`:s`。
+-   使用 `\` 与 `?` 命令会自动唤出搜索框，而不是直接在命令中键入单词进行搜索。同时，数字将无法生效。
+-   `q` 宏录制命令会启动 ST 自带的宏录制，按<kbd>Q</kbd>后需要再按一个键启动录制，但录制的宏不会与该键绑定，需要按<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Q</kbd>才能启动。如果需要保存，需要 `工具->保存宏`，快捷键需要设置。
+-   无法使用 `数字+.` 的组合。
 
 ### 设置
 
@@ -314,9 +314,9 @@ Snippet 类型的补全一般会有一些编辑块，补全后会自动选择为
 
 如果没有自动补全，请如下修复：
 
-1. 检查是否切换了语言，ST 默认新建文件为 Plain Text。
+1.  检查是否切换了语言，ST 默认新建文件为 Plain Text。
 
-2. 进入 `首选项->设置` 然后添上两行：
+2.  进入 `首选项->设置` 然后添上两行：
 
 ```JSON
 "auto_complete": true,
@@ -454,16 +454,16 @@ ST 默认的编译选项为 `g++ "${file}" -o "${file_path}/${file_base_name}"`�
 
 ## 杂项
 
-- 把文件夹拖进 ST 中并按<kbd>Ctrl</kbd>+<kbd>K</kbd>&<kbd>Ctrl</kbd>+<kbd>B</kbd>开启侧边栏，从而快速切换文件。
-- 善用跳转功能，尤其是<kbd>Ctrl</kbd>+<kbd>P</kbd>进行文件间跳转与<kbd>Ctrl</kbd>+<kbd>R</kbd>进行函数跳转。
-- ST 支持 git[^ref4]。
-- ST 的所有配置储存在数据目录下，可以随意打包，但注册信息无法在多台电脑上使用。
+-   把文件夹拖进 ST 中并按<kbd>Ctrl</kbd>+<kbd>K</kbd>&<kbd>Ctrl</kbd>+<kbd>B</kbd>开启侧边栏，从而快速切换文件。
+-   善用跳转功能，尤其是<kbd>Ctrl</kbd>+<kbd>P</kbd>进行文件间跳转与<kbd>Ctrl</kbd>+<kbd>R</kbd>进行函数跳转。
+-   ST 支持 git[^ref4]。
+-   ST 的所有配置储存在数据目录下，可以随意打包，但注册信息无法在多台电脑上使用。
 
 ## 外部链接
 
-- [使用命令行调试](../cmd.md)
-- [Sublime Text 3 官方文档](https://www.sublimetext.com/docs/3/)
-- [Sublime Text 社区文档](https://docs.sublimetext.io/)
+-   [使用命令行调试](../cmd.md)
+-   [Sublime Text 3 官方文档](https://www.sublimetext.com/docs/3/)
+-   [Sublime Text 社区文档](https://docs.sublimetext.io/)
 
 ## 参考资料与注释
 

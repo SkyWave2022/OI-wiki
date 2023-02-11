@@ -32,20 +32,20 @@ Windows 系统可以在 [Git 官网](https://git-scm.com/downloads) 获取到 Gi
     默认勾选的选项：
     
     -   `Windows Explorer integration`：资源管理器集成（右键菜单）。
-        - `Git Bash Here`：在当前目录运行 Git 命令行。
-        - `Git GUI Here`：在当前目录运行 Git 图形化页面。
-    - `Git LFS`：安装 Git Large File Support（大文件支持）。[^note1]
-    - `Associate .git* configuration files with the default text editor`：将所有 `.git` 配置文件与默认文本编辑器关联，并用其打开。默认文本编辑器会在后面配置。
-    - `Associate .sh files to be run with Bash`：将所有扩展名为 `.sh` 的文件与 Git Bash 关联，并用其执行。
+        -   `Git Bash Here`：在当前目录运行 Git 命令行。
+        -   `Git GUI Here`：在当前目录运行 Git 图形化页面。
+    -   `Git LFS`：安装 Git Large File Support（大文件支持）。[^note1]
+    -   `Associate .git* configuration files with the default text editor`：将所有 `.git` 配置文件与默认文本编辑器关联，并用其打开。默认文本编辑器会在后面配置。
+    -   `Associate .sh files to be run with Bash`：将所有扩展名为 `.sh` 的文件与 Git Bash 关联，并用其执行。
     
     * * *
     
     默认不勾选的选项：
     
     -   `Additional icons`
-        - `On the Desktop`：让 Git 在桌面创建快捷方式。
-    - `Use a TrueType font in all console windows`：让 Git 在所有命令行（包括 cmd 命令行窗口）中都使用 TrueType 字体。
-    - `Check daily for Git for Windows updates`：让 Git 每天检查更新。
+        -   `On the Desktop`：让 Git 在桌面创建快捷方式。
+    -   `Use a TrueType font in all console windows`：让 Git 在所有命令行（包括 cmd 命令行窗口）中都使用 TrueType 字体。
+    -   `Check daily for Git for Windows updates`：让 Git 每天检查更新。
 
 点击 `Next >`，选择存放 Git 快捷方式的开始菜单文件夹。若勾选 `Don't create a Start Menu folder`，则 Git 不会在开始菜单创建快捷方式。
 
@@ -95,8 +95,8 @@ macOS 系统只需在终端执行 `brew install git` 命令即可安装。（需
 
 Git 根据配置文件的应用范围，将配置文件分为不同的等级，其中较常用的有两个级别[^note3]：
 
-1. 适用于当前用户的全局配置文件，该用户操作本系统上的所有仓库时都会查询该配置文件。
-2. 适用于当前仓库的配置文件。
+1.  适用于当前用户的全局配置文件，该用户操作本系统上的所有仓库时都会查询该配置文件。
+2.  适用于当前仓库的配置文件。
 
 当多个配置文件对同一个选项作出设置的时候，局部设置会自动覆盖全局设置。因此如果需要在某个仓库应用特定的设置的话，只需更改该仓库下的特定设置即可，不会对全局设置造成影响。
 
@@ -255,8 +255,8 @@ $ git commit # 接下来会弹出编辑器页面，你需要写下 commit 信息
 
 另外，commit 过程中可以利用几个参数来简化提交过程：
 
-- `-a`：在提交前将所有已跟踪的文件的更改放入暂存区。需要注意的是未被跟踪的文件（新创建的文件）不会被自动加入暂存区，需要用 `git add` 命令手动添加。
-- `-m`：该参数后跟提交信息，表示以该提交信息提交本次更改。例如 `git commit -m "fix: typo"` 会创建一条标题为 `fix: typo` 的 commit。
+-   `-a`：在提交前将所有已跟踪的文件的更改放入暂存区。需要注意的是未被跟踪的文件（新创建的文件）不会被自动加入暂存区，需要用 `git add` 命令手动添加。
+-   `-m`：该参数后跟提交信息，表示以该提交信息提交本次更改。例如 `git commit -m "fix: typo"` 会创建一条标题为 `fix: typo` 的 commit。
 
 ### 查看提交记录
 
@@ -283,8 +283,8 @@ Date:   Sun Sep 13 00:06:07 2020 +0800
 
 为什么版本管理中需要分支管理呢？答案主要有两点：
 
-1. 直接更改主分支不仅会使历史记录混乱，也可能会造成一些危险的后果。
-2. 通过分支，我们可以专注于当前的工作。如果我们需要完成两个不同的工作，只需开两个分支即可，两个分支间的工作互不干扰。
+1.  直接更改主分支不仅会使历史记录混乱，也可能会造成一些危险的后果。
+2.  通过分支，我们可以专注于当前的工作。如果我们需要完成两个不同的工作，只需开两个分支即可，两个分支间的工作互不干扰。
 
 在 Git 中，简单来说，分支就是指向某个快照的指针。每次提交时，Git 都会为这次提交创建一个快照，并将当前分支的指针移动到该快照。
 
@@ -334,11 +334,11 @@ $ git commit -a -m "feat: update README.md"
 
 `master` 分支被标红，表明在这几次操作后，它是当前分支（即 HEAD 指向的位置）。
 
-- 最开始时 `master` 指向 `ae9dd37` 这一快照。
-- 接下来在 `master` 所在的位置创建了一个新的 dev 分支，该分支一开始和 master 指向相同位置。
-- 在 `dev` 分支上作了一些更改（创建了 `aplusb.cpp`），进行了一次提交，本次提交后，`dev` 分支指向 `5da093b` 这一快照。
-- 切换回 `master` 分支后，因为 `master` 分支还指向 `ae9dd37`，还没有创建 `aplusb.cpp`，因此仓库中没有这一文件。
-- 接下来在 `master` 分支上进行更改（更新了 `README.md`），进行了一次提交，`master` 分支指向了 `5ca15f0` 这一快照。
+-   最开始时 `master` 指向 `ae9dd37` 这一快照。
+-   接下来在 `master` 所在的位置创建了一个新的 dev 分支，该分支一开始和 master 指向相同位置。
+-   在 `dev` 分支上作了一些更改（创建了 `aplusb.cpp`），进行了一次提交，本次提交后，`dev` 分支指向 `5da093b` 这一快照。
+-   切换回 `master` 分支后，因为 `master` 分支还指向 `ae9dd37`，还没有创建 `aplusb.cpp`，因此仓库中没有这一文件。
+-   接下来在 `master` 分支上进行更改（更新了 `README.md`），进行了一次提交，`master` 分支指向了 `5ca15f0` 这一快照。
 
 ### 分支的合并
 
@@ -601,9 +601,9 @@ Git 本身自带有 GUI，市面上也有很多优秀的 Git GUI 工具，例如
 
 ## 外部链接
 
-- [Git Reference](https://git-scm.com/docs)
-- [Pro Git Book](https://git-scm.com/book/zh/v2)
-- [Learn Git Branching](https://learngitbranching.js.org/)
+-   [Git Reference](https://git-scm.com/docs)
+-   [Pro Git Book](https://git-scm.com/book/zh/v2)
+-   [Learn Git Branching](https://learngitbranching.js.org/)
 
 ## 参考资料与注释
 

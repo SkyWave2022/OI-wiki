@@ -55,7 +55,7 @@ Julia 语言中，[sum](https://docs.julialang.org/en/v1/base/collections/#Base.
 
 ## 参考资料与注释
 
-1. [Kahan_summation_algorithm - Wikipedia](https://en.wikipedia.org/wiki/Kahan_summation_algorithm)
-2. [Kahan summation - Rosetta Code](https://rosettacode.org/wiki/Kahan_summation)
-3. [VK Cup Round 2 + Codeforces Round 409 Announcement](https://codeforces.com/blog/entry/51577)
-4. [Rounding off errors in Java - GeeksforGeeks](https://www.geeksforgeeks.org/rounding-off-errors-java/)
+1.  [Kahan_summation_algorithm - Wikipedia](https://en.wikipedia.org/wiki/Kahan_summation_algorithm)
+2.  [Kahan summation - Rosetta Code](https://rosettacode.org/wiki/Kahan_summation)
+3.  [VK Cup Round 2 + Codeforces Round 409 Announcement](https://codeforces.com/blog/entry/51577)
+4.  [Rounding off errors in Java - GeeksforGeeks](https://www.geeksforgeeks.org/rounding-off-errors-java/)

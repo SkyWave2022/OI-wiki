@@ -17,9 +17,9 @@
 
 可以得到两个状态：
 
-- $i \xrightarrow{y} (i+y) \bmod x$
+-   $i \xrightarrow{y} (i+y) \bmod x$
 
-- $i \xrightarrow{z} (i+z) \bmod x$
+-   $i \xrightarrow{z} (i+z) \bmod x$
 
 注意通常选取一组 $a_i$ 中最小的那个数对它取模，也就是此处的 $x$，这样可以尽量减小空间复杂度（剩余系最小）。
 

@@ -19,8 +19,8 @@
 
 以下表格中分别为整数分拆 $(5,4,1)$ 对应的杨图不同画法：
 
-- 英式画法：![](./images/young-diagram-1.png)
-- 法式画法：![](./images/young-diagram-2.png)
+-   英式画法：![](./images/young-diagram-1.png)
+-   法式画法：![](./images/young-diagram-2.png)
 
 ### 杨表
 
@@ -43,9 +43,9 @@ $1, 1, 2, 4, 10, 26, 76, 232, 764, 2620, 9496, \ldots$（[OEIS](https://en.wikip
 
 令 $S$ 是一个杨表，定义 $S \leftarrow x$ 表示将 $x$ 从第一行插入杨表中，具体如下：
 
-1. 在当前行中找到最小的比 $x$ 大的数 $y$。
-2. 如果找到了，用 $x$ 去替换 $y$，移到下一行，令 $x \leftarrow y$ 重复操作 1。
-3. 如果找不到，就把 $x$ 放在该行末尾并退出。记 $x$ 在第 $s$ 行第 $t$ 列，$(s, t)$ 必定是一个边角。一个格子 $(s, t)$ 是边角当且仅当 $(s + 1, t)$ 和 $(s, t + 1)$ 都不存在格子。
+1.  在当前行中找到最小的比 $x$ 大的数 $y$。
+2.  如果找到了，用 $x$ 去替换 $y$，移到下一行，令 $x \leftarrow y$ 重复操作 1。
+3.  如果找不到，就把 $x$ 放在该行末尾并退出。记 $x$ 在第 $s$ 行第 $t$ 列，$(s, t)$ 必定是一个边角。一个格子 $(s, t)$ 是边角当且仅当 $(s + 1, t)$ 和 $(s, t + 1)$ 都不存在格子。
 
 例如，将 $3$ 插入杨表 $(2, 5, 9)(6, 7)(8)$ 的步骤为：
 
@@ -99,7 +99,7 @@ $$
 
 对于杨表 $P$, 定义对于一个从 $1$ 到 $n$ 的排列 $X = x_{1}, \ldots , x_{n}$。
 
-1. $P_{X}$ 中第一行的长度即为排列 $X$ 的 **最长上升子序列（LIS)** 长度。注意，$P$ 的第一行并不一定是 LIS 本身，所以不能直接利用杨表性质解决「LIS 划分」之类的问题。
+1.  $P_{X}$ 中第一行的长度即为排列 $X$ 的 **最长上升子序列（LIS)** 长度。注意，$P$ 的第一行并不一定是 LIS 本身，所以不能直接利用杨表性质解决「LIS 划分」之类的问题。
 
 2.  对于一个排列 $X$ 和它产生的杨表 $P_{X}$，若 $X^R$ 是 $X$ 的翻转，那么 $X^R$ 产生的杨表 $P_{X^R}$ 即为 $P_{X}$ 交换行列得到。
 
@@ -107,7 +107,7 @@ $$
 
     ![](./images/young-tableau-LIS-1.jpg)![](./images/young-tableau-LIS-2.jpg)
 
-3. 杨表 $P_{X}$ 中的第一列长度即为排列 $X$ 的 **最长下降子序列（LDS)** 长度。
+3.  杨表 $P_{X}$ 中的第一列长度即为排列 $X$ 的 **最长下降子序列（LDS)** 长度。
 
 定义长度不超过 $k$ 的 $LIS/LDS$ 长度为 $k-LIS$ 和 $k-LDS$, 此类问题我们同样可以用杨表来解决。对于 $1-LIS$，显而易见最长的 $1-LIS$ 子序列就是该序列的 $LDS$，这也正是杨表的第一列；同样可得，杨表前 $k$ 列的长度就是最长的 $k-LIS$ 子序列的长度。证明如下：
 
@@ -131,7 +131,7 @@ $$
 
 ## 参考资料与拓展阅读
 
-- [1][Young Tableau - from Wolfram MathWorld](<https://mathworld.wolfram.com/YoungTableau.html>)
-- [2][Young tableau - Wikipedia](<https://en.wikipedia.org/wiki/Young_tableau>)
-- [3][Hook length formula - Wikipedia](<https://en.wikipedia.org/wiki/Hook_length_formula>)
-- [4]袁方舟，[《浅谈杨氏矩阵在信息学竞赛中的应用》IOI2019](https://github.com/OI-wiki/libs/blob/master/%E9%9B%86%E8%AE%AD%E9%98%9F%E5%8E%86%E5%B9%B4%E8%AE%BA%E6%96%87/%E5%9B%BD%E5%AE%B6%E9%9B%86%E8%AE%AD%E9%98%9F2019%E8%AE%BA%E6%96%87%E9%9B%86.pdf), 中国国家候选队论文集，202-229
+-   [1][Young Tableau - from Wolfram MathWorld](<https://mathworld.wolfram.com/YoungTableau.html>)
+-   [2][Young tableau - Wikipedia](<https://en.wikipedia.org/wiki/Young_tableau>)
+-   [3][Hook length formula - Wikipedia](<https://en.wikipedia.org/wiki/Hook_length_formula>)
+-   [4]袁方舟，[《浅谈杨氏矩阵在信息学竞赛中的应用》IOI2019](https://github.com/OI-wiki/libs/blob/master/%E9%9B%86%E8%AE%AD%E9%98%9F%E5%8E%86%E5%B9%B4%E8%AE%BA%E6%96%87/%E5%9B%BD%E5%AE%B6%E9%9B%86%E8%AE%AD%E9%98%9F2019%E8%AE%BA%E6%96%87%E9%9B%86.pdf), 中国国家候选队论文集，202-229

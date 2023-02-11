@@ -232,10 +232,10 @@ $$
     
     在这些方程中，对于 $A_i x + B_i y > 0$，有四个情况：
     
-    1. $A_i, B_i > 0$ 可以忽略，因为正在查找 $x, y > 0$。
-    2. $A_i, B_i \leq 0$ 将提供“IMPOSSIBLE”作为答案。
-    3. $A_i > 0$,$B_i \leq 0$。这样的约束相当于 $\frac{y}{x} < \frac{A_i}{-B_i}$。
-    4. $A_i \leq 0$,$B_i > 0$。这样的约束相当于 $\frac{y}{x} > \frac{-A_i}{B_i}$。
+    1.  $A_i, B_i > 0$ 可以忽略，因为正在查找 $x, y > 0$。
+    2.  $A_i, B_i \leq 0$ 将提供“IMPOSSIBLE”作为答案。
+    3.  $A_i > 0$,$B_i \leq 0$。这样的约束相当于 $\frac{y}{x} < \frac{A_i}{-B_i}$。
+    4.  $A_i \leq 0$,$B_i > 0$。这样的约束相当于 $\frac{y}{x} > \frac{-A_i}{B_i}$。
     
     让 $\frac{p_0}{q_0}$ 是第四组中最大的 $\frac{-A_i}{B_i}$，而 $\frac{p_1}{q_1}$ 则是第三组中最小的 $\frac{A_i}{-B_i}$。
     
@@ -290,14 +290,14 @@ $$
 
 另一方面，当 $p>q$ 时，在 Calkin-Wilf 树中重复从 $s_k = \frac{p}{q}$ 到它的父节点，那么将以 $\frac{p \mod q}{q} = \frac{1}{s_{k+1}}$ 结尾。如果继续这样做，将以 $s_{k+2}$，然后 $\frac{1}{s_{k+3}}$ 等结尾。由此可以推断：
 
-1. 当 $a_0>0$ 时，Calkin-Wilf 树中 $[a_0; a_1, \dots, a_k]$ 的直接父节点为 $\frac{p-q}{q}=[a_0 - 1; a_1, \dots, a_k]$。
-2. 当 $a_0=0$ 且 $a_1>1$ 时，其直接父节点为 $\frac{p}{q-p} = [0; a_1 - 1, a_2, \dots, a_k]$。
-3. 当 $a_0=0$ 且 $a_1=1$ 时，其直接父节点为 $\frac{p}{q-p} = [a_2; a_3, \dots, a_k]$。
+1.  当 $a_0>0$ 时，Calkin-Wilf 树中 $[a_0; a_1, \dots, a_k]$ 的直接父节点为 $\frac{p-q}{q}=[a_0 - 1; a_1, \dots, a_k]$。
+2.  当 $a_0=0$ 且 $a_1>1$ 时，其直接父节点为 $\frac{p}{q-p} = [0; a_1 - 1, a_2, \dots, a_k]$。
+3.  当 $a_0=0$ 且 $a_1=1$ 时，其直接父节点为 $\frac{p}{q-p} = [a_2; a_3, \dots, a_k]$。
 
 相应地，$\frac{p}{q} = [a_0; a_1, \dots, a_k]$ 的子节点为
 
-1. $\frac{p+q}{q}=1+\frac{p}{q}$，即 $[a_0+1; a_1, \dots, a_k]$。
-2. $\frac{p}{p+q} = \frac{1}{1+\frac{q}{p}}$，对于 $a_0>0$，它是 $[0, 1, a_0, a_1, \dots, a_k]$；对于 $a_0=0$，则是 $[0, a_1+1, a_2, \dots, a_k]$。
+1.  $\frac{p+q}{q}=1+\frac{p}{q}$，即 $[a_0+1; a_1, \dots, a_k]$。
+2.  $\frac{p}{p+q} = \frac{1}{1+\frac{q}{p}}$，对于 $a_0>0$，它是 $[0, 1, a_0, a_1, \dots, a_k]$；对于 $a_0=0$，则是 $[0, a_1+1, a_2, \dots, a_k]$。
 
 值得注意的是，如果以广度优先搜索顺序枚举 Calkin-Wilf 树的顶点（即，根有一个数字 $1$，而顶点 $v$ 的子节点有相应的索引 $2v$ 和 $2v+1$），Calkin-Welf 树中有理数的索引将与 Stern-Brocot 树中的索引相同。
 
