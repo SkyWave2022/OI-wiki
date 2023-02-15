@@ -1,10 +1,10 @@
-author: Ir1d, ShadowsEpic, Fomalhauthmj, siger-young, MingqiHuang, Xeonacid, hsfzLZH1, orzAtalod, NachtgeistW
+author: Ir1d, ShadowsEpic, Fomalhauthmj, siger-young, MingqiHuang, Xeonacid, hsfzLZH1, orzAtalod, NachtgeistW, SkyWave2022
 
 本页面将简要介绍倍增法。
 
 ## 定义
 
-倍增法（英语：binary lifting），顾名思义就是翻倍。它能够使线性的处理转化为对数级的处理，大大地优化时间复杂度。
+倍增法（英语：binary lifting）。经常运用于需要多次统计 $n$ 个元素对答案的 $k$ 级贡献的题目。通常先是通过 $O(n \log k)$ 的递推预处理，处理出每一个元素对答案 2 的若干次幂的贡献，在回答询问时将 $k$ 级贡献拆解成二进制，即若干个 2 的幂相加的形式，再查询预处理的数据，分别相加得到答案。它能够使线性的询问回答转化为对数级的询问回答，大大地优化时间复杂度。
 
 这个方法在很多算法中均有应用，其中最常用的是 RMQ 问题和求 [LCA（最近公共祖先）](../graph/lca.md)。
 
